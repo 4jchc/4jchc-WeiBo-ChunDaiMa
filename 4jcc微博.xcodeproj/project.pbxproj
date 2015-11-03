@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9617B84F1BE84A7B00248A35 /* HWTest1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8311BE84A7B00248A35 /* HWTest1ViewController.swift */; };
+		9617B8501BE84A7B00248A35 /* HWTest1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9617B8321BE84A7B00248A35 /* HWTest1ViewController.xib */; };
+		9617B8511BE84A7B00248A35 /* HWTest2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8331BE84A7B00248A35 /* HWTest2ViewController.swift */; };
+		9617B8521BE84A7B00248A35 /* HWTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9617B8341BE84A7B00248A35 /* HWTest2ViewController.xib */; };
+		9617B8531BE84A7B00248A35 /* HWDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8371BE84A7B00248A35 /* HWDiscoverViewController.swift */; };
+		9617B8541BE84A7B00248A35 /* HWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B83C1BE84A7B00248A35 /* HWHomeViewController.swift */; };
+		9617B8551BE84A7B00248A35 /* HWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8411BE84A7B00248A35 /* HWNavigationController.swift */; };
+		9617B8561BE84A7B00248A35 /* HWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8421BE84A7B00248A35 /* HWTabBarViewController.swift */; };
+		9617B8571BE84A7B00248A35 /* HWMessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */; };
+		9617B8581BE84A7B00248A35 /* HWProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */; };
 		964E001E1BE75A5A0000AA56 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E001D1BE75A5A0000AA56 /* UIColorTool.swift */; };
-		964E00201BE77D360000AA56 /* HWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E001F1BE77D360000AA56 /* HWHomeViewController.swift */; };
-		964E00221BE77D5B0000AA56 /* HWMessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00211BE77D5B0000AA56 /* HWMessageCenterViewController.swift */; };
-		964E00241BE77DC60000AA56 /* HWDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00231BE77DC60000AA56 /* HWDiscoverViewController.swift */; };
-		964E00261BE77DD70000AA56 /* HWProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00251BE77DD70000AA56 /* HWProfileViewController.swift */; };
-		964E00281BE7867A0000AA56 /* HWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00271BE7867A0000AA56 /* HWTabBarViewController.swift */; };
-		964E002C1BE78FD60000AA56 /* HWTest1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E002A1BE78FD60000AA56 /* HWTest1ViewController.swift */; };
-		964E002D1BE78FD60000AA56 /* HWTest1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964E002B1BE78FD60000AA56 /* HWTest1ViewController.xib */; };
-		964E00301BE78FEA0000AA56 /* HWTest2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E002E1BE78FEA0000AA56 /* HWTest2ViewController.swift */; };
-		964E00311BE78FEA0000AA56 /* HWTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964E002F1BE78FEA0000AA56 /* HWTest2ViewController.xib */; };
-		964E00351BE7B3FE0000AA56 /* HWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00341BE7B3FE0000AA56 /* HWNavigationController.swift */; };
 		964E00371BE7B6900000AA56 /* frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00361BE7B6900000AA56 /* frame.swift */; };
 		964EFFAA1BE74C680000AA56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFA91BE74C680000AA56 /* AppDelegate.swift */; };
 		964EFFB21BE74C680000AA56 /* _jcc__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFB01BE74C680000AA56 /* _jcc__.xcdatamodeld */; };
@@ -44,17 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9617B8311BE84A7B00248A35 /* HWTest1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTest1ViewController.swift; sourceTree = "<group>"; };
+		9617B8321BE84A7B00248A35 /* HWTest1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWTest1ViewController.xib; sourceTree = "<group>"; };
+		9617B8331BE84A7B00248A35 /* HWTest2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTest2ViewController.swift; sourceTree = "<group>"; };
+		9617B8341BE84A7B00248A35 /* HWTest2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWTest2ViewController.xib; sourceTree = "<group>"; };
+		9617B8371BE84A7B00248A35 /* HWDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWDiscoverViewController.swift; sourceTree = "<group>"; };
+		9617B83C1BE84A7B00248A35 /* HWHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWHomeViewController.swift; sourceTree = "<group>"; };
+		9617B8411BE84A7B00248A35 /* HWNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNavigationController.swift; sourceTree = "<group>"; };
+		9617B8421BE84A7B00248A35 /* HWTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTabBarViewController.swift; sourceTree = "<group>"; };
+		9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWMessageCenterViewController.swift; sourceTree = "<group>"; };
+		9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWProfileViewController.swift; sourceTree = "<group>"; };
 		964E001D1BE75A5A0000AA56 /* UIColorTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
-		964E001F1BE77D360000AA56 /* HWHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWHomeViewController.swift; sourceTree = "<group>"; };
-		964E00211BE77D5B0000AA56 /* HWMessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWMessageCenterViewController.swift; sourceTree = "<group>"; };
-		964E00231BE77DC60000AA56 /* HWDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWDiscoverViewController.swift; sourceTree = "<group>"; };
-		964E00251BE77DD70000AA56 /* HWProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWProfileViewController.swift; sourceTree = "<group>"; };
-		964E00271BE7867A0000AA56 /* HWTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTabBarViewController.swift; sourceTree = "<group>"; };
-		964E002A1BE78FD60000AA56 /* HWTest1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTest1ViewController.swift; sourceTree = "<group>"; };
-		964E002B1BE78FD60000AA56 /* HWTest1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWTest1ViewController.xib; sourceTree = "<group>"; };
-		964E002E1BE78FEA0000AA56 /* HWTest2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTest2ViewController.swift; sourceTree = "<group>"; };
-		964E002F1BE78FEA0000AA56 /* HWTest2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWTest2ViewController.xib; sourceTree = "<group>"; };
-		964E00341BE7B3FE0000AA56 /* HWNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWNavigationController.swift; sourceTree = "<group>"; };
 		964E00361BE7B6900000AA56 /* frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = frame.swift; sourceTree = "<group>"; };
 		964EFFA61BE74C680000AA56 /* 4jcc微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4jcc微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		964EFFA91BE74C680000AA56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,16 +94,187 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9617B8301BE84A7B00248A35 /* CeShi */ = {
+			isa = PBXGroup;
+			children = (
+				9617B8311BE84A7B00248A35 /* HWTest1ViewController.swift */,
+				9617B8321BE84A7B00248A35 /* HWTest1ViewController.xib */,
+				9617B8331BE84A7B00248A35 /* HWTest2ViewController.swift */,
+				9617B8341BE84A7B00248A35 /* HWTest2ViewController.xib */,
+			);
+			path = CeShi;
+			sourceTree = "<group>";
+		};
+		9617B8351BE84A7B00248A35 /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				9617B8361BE84A7B00248A35 /* Controller */,
+				9617B8371BE84A7B00248A35 /* HWDiscoverViewController.swift */,
+				9617B8381BE84A7B00248A35 /* Moder */,
+				9617B8391BE84A7B00248A35 /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		9617B8361BE84A7B00248A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9617B8381BE84A7B00248A35 /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9617B8391BE84A7B00248A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9617B83A1BE84A7B00248A35 /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				9617B83B1BE84A7B00248A35 /* Controller */,
+				9617B83C1BE84A7B00248A35 /* HWHomeViewController.swift */,
+				9617B83D1BE84A7B00248A35 /* Moder */,
+				9617B83E1BE84A7B00248A35 /* View */,
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		9617B83B1BE84A7B00248A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9617B83D1BE84A7B00248A35 /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9617B83E1BE84A7B00248A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9617B83F1BE84A7B00248A35 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9617B8401BE84A7B00248A35 /* Controller */,
+				9617B8411BE84A7B00248A35 /* HWNavigationController.swift */,
+				9617B8421BE84A7B00248A35 /* HWTabBarViewController.swift */,
+				9617B8431BE84A7B00248A35 /* Moder */,
+				9617B8441BE84A7B00248A35 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9617B8401BE84A7B00248A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9617B8431BE84A7B00248A35 /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9617B8441BE84A7B00248A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9617B8451BE84A7B00248A35 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				9617B8461BE84A7B00248A35 /* Controller */,
+				9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */,
+				9617B8481BE84A7B00248A35 /* Moder */,
+				9617B8491BE84A7B00248A35 /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		9617B8461BE84A7B00248A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9617B8481BE84A7B00248A35 /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9617B8491BE84A7B00248A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9617B84A1BE84A7B00248A35 /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				9617B84B1BE84A7B00248A35 /* Controller */,
+				9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */,
+				9617B84D1BE84A7B00248A35 /* Moder */,
+				9617B84E1BE84A7B00248A35 /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		9617B84B1BE84A7B00248A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9617B84D1BE84A7B00248A35 /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9617B84E1BE84A7B00248A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		964E001B1BE759290000AA56 /* Clesses */ = {
 			isa = PBXGroup;
 			children = (
-				964E00291BE78FAF0000AA56 /* 测试 */,
-				964E001F1BE77D360000AA56 /* HWHomeViewController.swift */,
-				964E00341BE7B3FE0000AA56 /* HWNavigationController.swift */,
-				964E00271BE7867A0000AA56 /* HWTabBarViewController.swift */,
-				964E00231BE77DC60000AA56 /* HWDiscoverViewController.swift */,
-				964E00251BE77DD70000AA56 /* HWProfileViewController.swift */,
-				964E00211BE77D5B0000AA56 /* HWMessageCenterViewController.swift */,
+				9617B8301BE84A7B00248A35 /* CeShi */,
+				9617B8351BE84A7B00248A35 /* Discover(发现) */,
+				9617B83A1BE84A7B00248A35 /* Home(主页) */,
+				9617B83F1BE84A7B00248A35 /* Main */,
+				9617B8451BE84A7B00248A35 /* Message(消息) */,
+				9617B84A1BE84A7B00248A35 /* Profile(我) */,
 			);
 			path = Clesses;
 			sourceTree = "<group>";
@@ -115,17 +286,6 @@
 				964E00361BE7B6900000AA56 /* frame.swift */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		964E00291BE78FAF0000AA56 /* 测试 */ = {
-			isa = PBXGroup;
-			children = (
-				964E002A1BE78FD60000AA56 /* HWTest1ViewController.swift */,
-				964E002E1BE78FEA0000AA56 /* HWTest2ViewController.swift */,
-				964E002F1BE78FEA0000AA56 /* HWTest2ViewController.xib */,
-				964E002B1BE78FD60000AA56 /* HWTest1ViewController.xib */,
-			);
-			name = "测试";
 			sourceTree = "<group>";
 		};
 		964EFF9D1BE74C680000AA56 = {
@@ -151,9 +311,9 @@
 		964EFFA81BE74C680000AA56 /* 4jcc微博 */ = {
 			isa = PBXGroup;
 			children = (
+				964EFFA91BE74C680000AA56 /* AppDelegate.swift */,
 				964E001C1BE75A260000AA56 /* Tools */,
 				964E001B1BE759290000AA56 /* Clesses */,
-				964EFFA91BE74C680000AA56 /* AppDelegate.swift */,
 				964EFFB31BE74C680000AA56 /* Assets.xcassets */,
 				964EFFB81BE74C680000AA56 /* Info.plist */,
 				964EFFB01BE74C680000AA56 /* _jcc__.xcdatamodeld */,
@@ -283,8 +443,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				964EFFB41BE74C680000AA56 /* Assets.xcassets in Resources */,
-				964E00311BE78FEA0000AA56 /* HWTest2ViewController.xib in Resources */,
-				964E002D1BE78FD60000AA56 /* HWTest1ViewController.xib in Resources */,
+				9617B8521BE84A7B00248A35 /* HWTest2ViewController.xib in Resources */,
+				9617B8501BE84A7B00248A35 /* HWTest1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,17 +469,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964E00241BE77DC60000AA56 /* HWDiscoverViewController.swift in Sources */,
+				9617B8531BE84A7B00248A35 /* HWDiscoverViewController.swift in Sources */,
+				9617B8561BE84A7B00248A35 /* HWTabBarViewController.swift in Sources */,
+				9617B84F1BE84A7B00248A35 /* HWTest1ViewController.swift in Sources */,
+				9617B8581BE84A7B00248A35 /* HWProfileViewController.swift in Sources */,
 				964E00371BE7B6900000AA56 /* frame.swift in Sources */,
-				964E002C1BE78FD60000AA56 /* HWTest1ViewController.swift in Sources */,
-				964E00301BE78FEA0000AA56 /* HWTest2ViewController.swift in Sources */,
-				964E00281BE7867A0000AA56 /* HWTabBarViewController.swift in Sources */,
-				964E00261BE77DD70000AA56 /* HWProfileViewController.swift in Sources */,
-				964E00201BE77D360000AA56 /* HWHomeViewController.swift in Sources */,
-				964E00351BE7B3FE0000AA56 /* HWNavigationController.swift in Sources */,
+				9617B8511BE84A7B00248A35 /* HWTest2ViewController.swift in Sources */,
+				9617B8541BE84A7B00248A35 /* HWHomeViewController.swift in Sources */,
 				964EFFB21BE74C680000AA56 /* _jcc__.xcdatamodeld in Sources */,
+				9617B8571BE84A7B00248A35 /* HWMessageCenterViewController.swift in Sources */,
 				964EFFAA1BE74C680000AA56 /* AppDelegate.swift in Sources */,
-				964E00221BE77D5B0000AA56 /* HWMessageCenterViewController.swift in Sources */,
+				9617B8551BE84A7B00248A35 /* HWNavigationController.swift in Sources */,
 				964E001E1BE75A5A0000AA56 /* UIColorTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +688,7 @@
 				964EFFD31BE74C680000AA56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		964EFFD41BE74C680000AA56 /* Build configuration list for PBXNativeTarget "4jcc微博Tests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +697,7 @@
 				964EFFD61BE74C680000AA56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		964EFFD71BE74C680000AA56 /* Build configuration list for PBXNativeTarget "4jcc微博UITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +706,7 @@
 				964EFFD91BE74C680000AA56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

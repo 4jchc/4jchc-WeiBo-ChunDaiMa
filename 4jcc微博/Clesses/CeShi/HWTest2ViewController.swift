@@ -20,7 +20,7 @@ class HWTest2ViewController: UIViewController {
  override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "4j成才", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {

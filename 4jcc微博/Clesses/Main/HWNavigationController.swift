@@ -46,10 +46,10 @@ class HWNavigationController: UINavigationController {
     override func pushViewController(viewController: UIViewController, animated: Bool) {
         
         if (self.viewControllers.count > 0) { // 这时push进来的控制器viewController，不是第一个子控制器（不是根控制器）
-            /* 自动显示和隐藏tabbar */
+            ///* 自动显示和隐藏tabbar */
             viewController.hidesBottomBarWhenPushed = true
             
-            /* 设置导航栏上面的内容 */
+            ///* 设置导航栏上面的内容 */
             let backBtn:UIButton = UIButton(type: UIButtonType.Custom)
                 backBtn.addTarget(self, action: "back", forControlEvents: UIControlEvents.TouchUpInside)
 
