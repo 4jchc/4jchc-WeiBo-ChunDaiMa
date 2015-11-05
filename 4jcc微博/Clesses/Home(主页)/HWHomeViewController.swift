@@ -8,8 +8,10 @@
 
 import UIKit
 
-class HWHomeViewController: UITableViewController {
+class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
 
+    //var titleButton:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,7 @@ class HWHomeViewController: UITableViewController {
         
 
         
-        /* 中间的标题按钮 */
+        ///* 中间的标题按钮 */
         //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         let titleButton:UIButton = UIButton()
         
@@ -28,44 +30,26 @@ class HWHomeViewController: UITableViewController {
         titleButton.frame.size.height = 30;
         //    titleButton.backgroundColor = HWRandomColor;
         
-        // 设置图片和文字
+        /// 设置图片和文字
         titleButton.setTitle("首页", forState: UIControlState.Normal)
         titleButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
 
         titleButton.titleLabel!.font = UIFont.boldSystemFontOfSize(13.0)
         titleButton.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
+        titleButton.setImage(UIImage(named: "navigationbar_arrow_up"), forState: UIControlState.Selected)
+        
         //    titleButton.imageView.backgroundColor = [UIColor redColor];
         //    titleButton.titleLabel.backgroundColor = [UIColor blueColor];
         titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
         titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
         
-        
-        
-        // 监听标题点击
+        /// 监听标题点击
         titleButton.addTarget(self, action: "titleClick:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.navigationItem.titleView = titleButton;
         // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
-        let grayView:UIView = UIView()
         
-        grayView.frame.size.width = 200;
-        grayView.frame.size.height = 70;
-        grayView.frame.origin.x = 20;
-        grayView.frame.origin.y = 30;
-        grayView.backgroundColor = UIColor.grayColor()
-        self.view.addSubview(grayView)
 
-        let btn:UIButton = UIButton()
-        btn.frame.size.width = 100;
-        btn.frame.origin.x = 140;
-        btn.frame.origin.y = 30;
-        btn.frame.size.height = 30;
-        btn.backgroundColor = UIColor.redColor()
-        btn.addTarget(self, action: "titleClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        grayView.addSubview(btn)
-        
-        
-        
         
     }
     
@@ -76,7 +60,7 @@ class HWHomeViewController: UITableViewController {
     func titleClick(titleButton:UIButton){
     // 1.创建下拉菜单
         let menu:HMDropdownMenu = HMDropdownMenu.menu()
-    
+        menu.delegate = self
     // 2.设置内容
         let vc:HWTitleMenuViewController = HWTitleMenuViewController()
 
@@ -87,6 +71,7 @@ class HWHomeViewController: UITableViewController {
     // 3.显示
         menu.showFrom(titleButton)
     }
+
 
     
     
@@ -99,6 +84,33 @@ class HWHomeViewController: UITableViewController {
     {
     NSLog("pop");
     }
+    
+    ///*****✅#pragma mark - HWDropdownMenuDelegate
+    /**
+    *  下拉菜单被销毁了
+    */
+    func dropdownMenuDidDismiss(menu: HMDropdownMenu) {
+        
+        let titleButton:UIButton = self.navigationItem.titleView as! UIButton
+        
+        titleButton.selected = false
+        
+        // 让箭头向下
+        //    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    }
+    
+    /**
+    *  下拉菜单显示了
+    */
+    func dropdownMenuDidShow(menu: HMDropdownMenu) {
+        
+         let titleButton:UIButton = self.navigationItem.titleView as! UIButton
+        
+        titleButton.selected = true
+        // 让箭头向上
+        //    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    }
+
     
     
     

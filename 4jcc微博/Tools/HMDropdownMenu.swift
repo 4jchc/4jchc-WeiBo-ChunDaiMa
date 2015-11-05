@@ -7,9 +7,19 @@
 //
 
 import UIKit
+///*****✅监听下拉菜单的点击和销毁来改变被点击按钮的图片状态
+    protocol HMDropdownMenuDelegate:NSObjectProtocol{
+    
+    func dropdownMenuDidDismiss(menu:HMDropdownMenu)
+    
+    func dropdownMenuDidShow(menu:HMDropdownMenu)
+   
+    
+}
 
 class HMDropdownMenu: UIView {
     
+    weak var delegate:HMDropdownMenuDelegate?
     
     /**
     *  内容
@@ -136,8 +146,15 @@ class HMDropdownMenu: UIView {
        
         
         self.containerView.frame.origin.y = CGRectGetMaxY(newFrame);
-       
-
+   
+        /// 通知外界，自己显示了
+        if self.delegate != nil{
+            
+            self.delegate?.dropdownMenuDidShow(self)
+        }
+        
+        
+        
     }
     /**
     *  销毁
@@ -145,6 +162,13 @@ class HMDropdownMenu: UIView {
     func dismiss(){
         
          self.removeFromSuperview()
+        /// 通知外界，自己被销毁了
+        if self.delegate != nil{
+            
+            self.delegate?.dropdownMenuDidDismiss(self)
+        }
+        
+        
     }
 
   

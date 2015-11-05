@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HWTabBarViewController: UITabBarController {
+class HWTabBarViewController: UITabBarController,HMTabBarDelegate{
     
 
     override func viewDidLoad() {
@@ -28,6 +28,16 @@ class HWTabBarViewController: UITabBarController {
         
         let profile:HWProfileViewController = HWProfileViewController()
         self.addChildVc(profile, title: "我", image: "tabbar_profile", selectedImage: "tabbar_profile_selected")
+        
+        ////*****✅ 2.更换系统自带的tabbar
+        //    self.tabBar = [[HWTabBar alloc] init];
+        let tabBar:HMTabBar = HMTabBar()
+        tabBar.delegateHM = self;
+        self.setValue(tabBar, forKeyPath: "tabBar")
+     
+        //    self.tabBar = tabBar;
+        
+        
     }
 
     
@@ -82,6 +92,20 @@ class HWTabBarViewController: UITabBarController {
         
         
     }
+    
+    ///*****✅#pragma mark - HWTabBarDelegate代理方法
+    
+    func tabBarDidClickPlusButton(tabBar:HMTabBar){
+        
+        let vc:UIViewController = UIViewController()
+        vc.view.backgroundColor = UIColor.redColor()
+        self.presentViewController(vc, animated: true, completion: nil)
+
+    }
+    
+ 
+    
+    
     
 
     

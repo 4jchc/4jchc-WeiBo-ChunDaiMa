@@ -18,6 +18,7 @@
 		9617B8571BE84A7B00248A35 /* HWMessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */; };
 		9617B8581BE84A7B00248A35 /* HWProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */; };
 		9617B85C1BE8644900248A35 /* Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B85B1BE8644900248A35 /* Extansion.swift */; };
+		9629A3601BEB0CC70097D62B /* HMTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9629A35F1BEB0CC70097D62B /* HMTabBar.swift */; };
 		9636BAD51BEA4E86009B8DF2 /* HWTitleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636BAD41BEA4E86009B8DF2 /* HWTitleMenuViewController.swift */; };
 		964EFFAA1BE74C680000AA56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFA91BE74C680000AA56 /* AppDelegate.swift */; };
 		964EFFB21BE74C680000AA56 /* _jcc__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFB01BE74C680000AA56 /* _jcc__.xcdatamodeld */; };
@@ -57,6 +58,7 @@
 		9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWMessageCenterViewController.swift; sourceTree = "<group>"; };
 		9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWProfileViewController.swift; sourceTree = "<group>"; };
 		9617B85B1BE8644900248A35 /* Extansion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extansion.swift; sourceTree = "<group>"; };
+		9629A35F1BEB0CC70097D62B /* HMTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMTabBar.swift; sourceTree = "<group>"; };
 		9636BAD41BEA4E86009B8DF2 /* HWTitleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTitleMenuViewController.swift; sourceTree = "<group>"; };
 		964EFFA61BE74C680000AA56 /* 4jcc微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4jcc微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		964EFFA91BE74C680000AA56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				9617B85B1BE8644900248A35 /* Extansion.swift */,
+				9629A35F1BEB0CC70097D62B /* HMTabBar.swift */,
 				96B66E591BE9FA3700F398AD /* HMSearchBar.swift */,
 				96B66E5B1BEA31C200F398AD /* HMDropdownMenu.swift */,
 			);
@@ -484,6 +487,7 @@
 				96B66E5C1BEA31C200F398AD /* HMDropdownMenu.swift in Sources */,
 				9617B8581BE84A7B00248A35 /* HWProfileViewController.swift in Sources */,
 				9617B8511BE84A7B00248A35 /* HWTest2ViewController.swift in Sources */,
+				9629A3601BEB0CC70097D62B /* HMTabBar.swift in Sources */,
 				9617B8541BE84A7B00248A35 /* HWHomeViewController.swift in Sources */,
 				964EFFB21BE74C680000AA56 /* _jcc__.xcdatamodeld in Sources */,
 				9617B8571BE84A7B00248A35 /* HWMessageCenterViewController.swift in Sources */,
