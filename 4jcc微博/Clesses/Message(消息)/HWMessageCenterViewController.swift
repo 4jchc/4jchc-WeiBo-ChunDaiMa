@@ -16,13 +16,22 @@ class HWMessageCenterViewController: UITableViewController{
         super.viewDidLoad()
         
        // let ID:NSString = "cell"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "set", style: UIBarButtonItemStyle.Plain, target: self, action: "setting")
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "写信息", style: UIBarButtonItemStyle.Done, target: self, action: "setting")
+
+        
        
     }
+    
     func setting(){
+        
         let v1 = HWTest2ViewController()
         self.navigationController?.pushViewController(v1, animated: true)
         
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+       // self.navigationItem.rightBarButtonItem?.enabled = false
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

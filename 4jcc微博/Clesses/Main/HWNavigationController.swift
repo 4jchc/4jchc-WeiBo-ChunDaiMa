@@ -10,10 +10,35 @@ import UIKit
 
 class HWNavigationController: UINavigationController {
 
+    ///*****✅程序一开始就会调用
+    override class func initialize() {
+
+        print(__FUNCTION__)
+
+        let item:UIBarButtonItem = UIBarButtonItem.appearance()
+        
+        // 设置普通状态
+        // key：NS****AttributeName
+        //颜色
+         let attributesNormal =  [NSForegroundColorAttributeName: UIColor.orangeColor(),            NSFontAttributeName: UIFont(name: "Heiti SC", size: 13.0)!]
+        
+        item.setTitleTextAttributes(attributesNormal, forState: UIControlState.Normal)
+        
+        //字体
+        /// 设置不可用状态
+        let attributesDisabled =  [NSForegroundColorAttributeName: UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.6), NSFontAttributeName: UIFont(name: "Heiti SC", size: 13.0)!]
+        item.setTitleTextAttributes(attributesDisabled, forState: UIControlState.Disabled)
+        
+  
+    }
+    
+    //
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,22 +46,7 @@ class HWNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-  
-    
-//    - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//    {
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//    // Custom initialization
-//    }
-//    return self;
-//    }
-//    
 
-    
     /**
     *  重写这个方法目的：能够拦截所有push进来的控制器
     *
@@ -50,33 +60,14 @@ class HWNavigationController: UINavigationController {
             viewController.hidesBottomBarWhenPushed = true
             
             ///* 设置导航栏上面的内容 */
-            let backBtn:UIButton = UIButton(type: UIButtonType.Custom)
-                backBtn.addTarget(self, action: "back", forControlEvents: UIControlEvents.TouchUpInside)
-
-            // 设置图片
-            backBtn.setBackgroundImage(UIImage(named: "navigationbar_back"), forState: UIControlState.Normal)
-            backBtn.setBackgroundImage(UIImage(named: "navigationbar_back_highlighted"), forState: UIControlState.Highlighted)
             
-            // 设置尺寸
-            backBtn.frame.size = (backBtn.currentBackgroundImage?.size)!
-           
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
-            let moreBtn:UIButton = UIButton(type: UIButtonType.Custom)
-            moreBtn.addTarget(self, action: "more", forControlEvents: UIControlEvents.TouchUpInside)
-
-            // 设置图片
-            moreBtn.setBackgroundImage(UIImage(named: "navigationbar_more"), forState: UIControlState.Normal)
-            moreBtn.setBackgroundImage(UIImage(named: "navigationbar_more_highlighted"), forState: UIControlState.Highlighted)
- 
-            // 设置尺寸
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "back", image: "navigationbar_back", hightImage: "navigationbar_back_highlighted")
+            viewController.navigationItem.rightBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "more", image: "navigationbar_more", hightImage: "navigationbar_more_highlighted")
             
-            moreBtn.frame.size = moreBtn.currentBackgroundImage!.size;
-            viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: moreBtn)
         }
         super.pushViewController(viewController, animated: animated)
        
     }
-    
     
 
     
@@ -92,11 +83,16 @@ class HWNavigationController: UINavigationController {
   
     }
 
-    
-    
-    
-    
-
-
 
 }
+
+
+
+
+
+
+
+
+
+
+

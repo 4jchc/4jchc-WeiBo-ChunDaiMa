@@ -10,11 +10,7 @@ import UIKit
 
 class HWTabBarViewController: UITabBarController {
     
-    
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +27,7 @@ class HWTabBarViewController: UITabBarController {
         self.addChildVc(discover, title: "发现", image: "tabbar_discover", selectedImage: "tabbar_discover_selected")
         
         let profile:HWProfileViewController = HWProfileViewController()
-        self.addChildVc(profile, title: "我", image: "tabbar_profile", selectedImage: "tabbar_profile")
+        self.addChildVc(profile, title: "我", image: "tabbar_profile", selectedImage: "tabbar_profile_selected")
     }
 
     
@@ -56,15 +52,13 @@ class HWTabBarViewController: UITabBarController {
         
         
         // 设置子控制器的文字和图片
-        
-        
+                
         // 设置子控制器的文字
         childVc.title = title as String // 同时设置tabbar和navigationBar的文字
-        // childVc.tabBarItem.title = title; // 设置tabbar的文字
-        // childVc.navigationItem.title = title; // 设置navigationBar的文字
-        
+        // 设置tabbar的文字
 //        childVc.tabBarItem.title = title as String
-//        //导航控制器的标题
+        
+        // 设置navigationBar的文字
 //        childVc.navigationItem.title = title as String
         
         
@@ -75,8 +69,8 @@ class HWTabBarViewController: UITabBarController {
         // 设置子控制器的文字和图片
         childVc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: normalcolor], forState: UIControlState.Normal)
         childVc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: selectedcolor], forState: UIControlState.Selected)
-        
-        childVc.view.backgroundColor = UIColorTool.randomColor()
+        ///view的颜色创建就会同时加载所有视图
+       // childVc.view.backgroundColor = UIColor.random()
         
         
         ////*****✅/ 先给外面传进来的小控制器 包装 一个导航控制器

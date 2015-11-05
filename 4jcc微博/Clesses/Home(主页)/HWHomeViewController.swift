@@ -13,12 +13,95 @@ class HWHomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        /* 设置导航栏上面的内容 */
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "friendSearch", image: "navigationbar_friendsearch", hightImage: "navigationbar_friendsearch_highlighted")
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "pop", image: "navigationbar_pop", hightImage: "navigationbar_pop_highlighted")
+        
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        /* 中间的标题按钮 */
+        //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        let titleButton:UIButton = UIButton()
+        
+        titleButton.frame.size.width = 150;
+        titleButton.frame.size.height = 30;
+        //    titleButton.backgroundColor = HWRandomColor;
+        
+        // 设置图片和文字
+        titleButton.setTitle("首页", forState: UIControlState.Normal)
+        titleButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+
+        titleButton.titleLabel!.font = UIFont.boldSystemFontOfSize(13.0)
+        titleButton.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
+        //    titleButton.imageView.backgroundColor = [UIColor redColor];
+        //    titleButton.titleLabel.backgroundColor = [UIColor blueColor];
+        titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+        titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+        
+        
+        
+        // 监听标题点击
+        titleButton.addTarget(self, action: "titleClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.navigationItem.titleView = titleButton;
+        // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
+        let grayView:UIView = UIView()
+        
+        grayView.frame.size.width = 200;
+        grayView.frame.size.height = 70;
+        grayView.frame.origin.x = 20;
+        grayView.frame.origin.y = 30;
+        grayView.backgroundColor = UIColor.grayColor()
+        self.view.addSubview(grayView)
+
+        let btn:UIButton = UIButton()
+        btn.frame.size.width = 100;
+        btn.frame.origin.x = 140;
+        btn.frame.origin.y = 30;
+        btn.frame.size.height = 30;
+        btn.backgroundColor = UIColor.redColor()
+        btn.addTarget(self, action: "titleClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        grayView.addSubview(btn)
+        
+        
+        
+        
     }
+    
+    
+    /**
+    *  标题点击
+    */
+    func titleClick(titleButton:UIButton){
+    // 1.创建下拉菜单
+        let menu:HMDropdownMenu = HMDropdownMenu.menu()
+    
+    // 2.设置内容
+        let vc:HWTitleMenuViewController = HWTitleMenuViewController()
+
+    vc.view.frame.size.height = 150;
+    vc.view.frame.size.width = 150;
+    menu.contentController = vc;
+    
+    // 3.显示
+        menu.showFrom(titleButton)
+    }
+
+    
+    
+    func friendSearch()
+    {
+    NSLog("friendSearch");
+    }
+    
+    func pop()
+    {
+    NSLog("pop");
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

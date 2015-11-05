@@ -17,13 +17,15 @@
 		9617B8561BE84A7B00248A35 /* HWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8421BE84A7B00248A35 /* HWTabBarViewController.swift */; };
 		9617B8571BE84A7B00248A35 /* HWMessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */; };
 		9617B8581BE84A7B00248A35 /* HWProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */; };
-		964E001E1BE75A5A0000AA56 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E001D1BE75A5A0000AA56 /* UIColorTool.swift */; };
-		964E00371BE7B6900000AA56 /* frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E00361BE7B6900000AA56 /* frame.swift */; };
+		9617B85C1BE8644900248A35 /* Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617B85B1BE8644900248A35 /* Extansion.swift */; };
+		9636BAD51BEA4E86009B8DF2 /* HWTitleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636BAD41BEA4E86009B8DF2 /* HWTitleMenuViewController.swift */; };
 		964EFFAA1BE74C680000AA56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFA91BE74C680000AA56 /* AppDelegate.swift */; };
 		964EFFB21BE74C680000AA56 /* _jcc__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFB01BE74C680000AA56 /* _jcc__.xcdatamodeld */; };
 		964EFFB41BE74C680000AA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964EFFB31BE74C680000AA56 /* Assets.xcassets */; };
 		964EFFC21BE74C680000AA56 /* _jcc__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFC11BE74C680000AA56 /* _jcc__Tests.swift */; };
 		964EFFCD1BE74C680000AA56 /* _jcc__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EFFCC1BE74C680000AA56 /* _jcc__UITests.swift */; };
+		96B66E5A1BE9FA3700F398AD /* HMSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B66E591BE9FA3700F398AD /* HMSearchBar.swift */; };
+		96B66E5C1BEA31C200F398AD /* HMDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B66E5B1BEA31C200F398AD /* HMDropdownMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +56,8 @@
 		9617B8421BE84A7B00248A35 /* HWTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTabBarViewController.swift; sourceTree = "<group>"; };
 		9617B8471BE84A7B00248A35 /* HWMessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWMessageCenterViewController.swift; sourceTree = "<group>"; };
 		9617B84C1BE84A7B00248A35 /* HWProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWProfileViewController.swift; sourceTree = "<group>"; };
-		964E001D1BE75A5A0000AA56 /* UIColorTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
-		964E00361BE7B6900000AA56 /* frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = frame.swift; sourceTree = "<group>"; };
+		9617B85B1BE8644900248A35 /* Extansion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extansion.swift; sourceTree = "<group>"; };
+		9636BAD41BEA4E86009B8DF2 /* HWTitleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWTitleMenuViewController.swift; sourceTree = "<group>"; };
 		964EFFA61BE74C680000AA56 /* 4jcc微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4jcc微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		964EFFA91BE74C680000AA56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		964EFFB11BE74C680000AA56 /* _jcc__.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _jcc__.xcdatamodel; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		964EFFC81BE74C680000AA56 /* 4jcc微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "4jcc微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		964EFFCC1BE74C680000AA56 /* _jcc__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _jcc__UITests.swift; sourceTree = "<group>"; };
 		964EFFCE1BE74C680000AA56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B66E591BE9FA3700F398AD /* HMSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMSearchBar.swift; sourceTree = "<group>"; };
+		96B66E5B1BEA31C200F398AD /* HMDropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMDropdownMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				9617B8311BE84A7B00248A35 /* HWTest1ViewController.swift */,
 				9617B8321BE84A7B00248A35 /* HWTest1ViewController.xib */,
+				9636BAD41BEA4E86009B8DF2 /* HWTitleMenuViewController.swift */,
 				9617B8331BE84A7B00248A35 /* HWTest2ViewController.swift */,
 				9617B8341BE84A7B00248A35 /* HWTest2ViewController.xib */,
 			);
@@ -282,8 +287,9 @@
 		964E001C1BE75A260000AA56 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				964E001D1BE75A5A0000AA56 /* UIColorTool.swift */,
-				964E00361BE7B6900000AA56 /* frame.swift */,
+				9617B85B1BE8644900248A35 /* Extansion.swift */,
+				96B66E591BE9FA3700F398AD /* HMSearchBar.swift */,
+				96B66E5B1BEA31C200F398AD /* HMDropdownMenu.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -470,17 +476,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9617B8531BE84A7B00248A35 /* HWDiscoverViewController.swift in Sources */,
+				9617B85C1BE8644900248A35 /* Extansion.swift in Sources */,
 				9617B8561BE84A7B00248A35 /* HWTabBarViewController.swift in Sources */,
 				9617B84F1BE84A7B00248A35 /* HWTest1ViewController.swift in Sources */,
+				96B66E5A1BE9FA3700F398AD /* HMSearchBar.swift in Sources */,
+				9636BAD51BEA4E86009B8DF2 /* HWTitleMenuViewController.swift in Sources */,
+				96B66E5C1BEA31C200F398AD /* HMDropdownMenu.swift in Sources */,
 				9617B8581BE84A7B00248A35 /* HWProfileViewController.swift in Sources */,
-				964E00371BE7B6900000AA56 /* frame.swift in Sources */,
 				9617B8511BE84A7B00248A35 /* HWTest2ViewController.swift in Sources */,
 				9617B8541BE84A7B00248A35 /* HWHomeViewController.swift in Sources */,
 				964EFFB21BE74C680000AA56 /* _jcc__.xcdatamodeld in Sources */,
 				9617B8571BE84A7B00248A35 /* HWMessageCenterViewController.swift in Sources */,
 				964EFFAA1BE74C680000AA56 /* AppDelegate.swift in Sources */,
 				9617B8551BE84A7B00248A35 /* HWNavigationController.swift in Sources */,
-				964E001E1BE75A5A0000AA56 /* UIColorTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

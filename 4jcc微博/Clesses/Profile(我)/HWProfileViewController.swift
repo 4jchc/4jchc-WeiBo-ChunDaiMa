@@ -13,11 +13,25 @@ class HWProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // let ID:NSString = "cell"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "设置",style: UIBarButtonItemStyle.Done, target: self, action: "setting")
+         self.navigationItem.rightBarButtonItem?.enabled = false
+        
+        let seachbar:HMSearchBar = HMSearchBar.addSeachBar()
+        seachbar.frame.size.width = 300
+        seachbar.frame.size.height = 30
+        seachbar.frame.origin.x = 21
+        view.addSubview(seachbar)
+    }
+    
+    func setting(){
+        let v1 = HWTest2ViewController()
+        self.navigationController?.pushViewController(v1, animated: true)
+        
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+      
     }
 
     override func didReceiveMemoryWarning() {
