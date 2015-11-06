@@ -25,18 +25,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 2.设置根控制器
        
-        self.window!.rootViewController = HWTabBarViewController()
+//        self.window!.rootViewController = HWTabBarViewController()
 
+        // 2.设置根控制器
+        //let account = HMAccountTool.loadAccount() as? HMAccount
+       // if let account = HMAccountTool.loadAccount(){
+        if let _ = HMAccountTool.loadAccount(){
+       // if (account == false)
+         // 之前已经登录成功过
+            self.window?.switchRootViewController()
+            
+        } else {
+           
+            //授权页面
+            self.window!.rootViewController = HMOAuthViewController()
+        }
         
+        // 3.显示窗口
+
         // 很多重复代码 ---> 将重复代码抽取到一个方法中
         // 1.相同的代码放到一个方法中
         // 2.不同的东西变成参数
         // 3.在使用到这段代码的这个地方调用方法， 传递参数
+
         
-        // 4.显示窗口
+
         self.window?.makeKeyAndVisible()
         
         return true
+        
+
+        
+        
     }
     
     
