@@ -99,7 +99,7 @@ class HMOAuthViewController: UIViewController,UIWebViewDelegate {
            
         }
         
-        return false
+        return true
     }
     
     
@@ -150,7 +150,7 @@ class HMOAuthViewController: UIViewController,UIWebViewDelegate {
             print("***请求成功-**\(responseObject)")
             MBProgressHUD.hideHUD()
             ///*****✅ 将返回的账号字典数据 --> 模型
-            let account:HMAccount = HMAccount.accountWithDict(responseObject as! NSDictionary)
+            let account:HMAccountModel = HMAccountModel.accountWithDict(responseObject as! NSDictionary)
             ///*****✅ 存进沙盒存储账号信息
             HMAccountTool.saveAccount(account)
             
@@ -167,10 +167,6 @@ class HMOAuthViewController: UIViewController,UIWebViewDelegate {
                 print("**请求失败**\(error)")
         }
     }
-
-
-
-
 
 
 

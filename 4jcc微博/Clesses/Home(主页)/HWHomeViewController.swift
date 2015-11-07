@@ -15,44 +15,93 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 设置导航栏内容
+        self.setupNav()
+        
+        // 获得用户信息（昵称）
+        self.setupUserInfo()
+        
+    }
+
+    /**
+    *  获得用户信息（昵称）
+    */
+    func setupUserInfo(){
+        
+    // https://api.weibo.com/2/users/show.json
+    // access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
+    // uid	false	int64	需要查询的用户ID。
+    // 1.请求管理者
+        let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
+  
+    // 2.拼接请求参数
+        let account:HMAccountModel = HMAccountTool.loadAccount()!
+        let params:NSMutableDictionary = NSMutableDictionary()
+
+        params["access_token"] = account.access_token;
+        params["uid"] = account.uid;
+    
+    // 3.发送请求
+        mgr.GET("https://api.weibo.com/2/users/show.json", parameters: params, success: { (operation, responseObject) -> Void in
+            /// 标题按钮
+            let titleButton:UIButton = self.navigationItem.titleView as! UIButton
+            /// 设置名字
+            let name:NSString = responseObject["name"] as! NSString
+            titleButton.setTitle(name as String, forState: UIControlState.Normal)
+            /// 存储昵称到沙盒中
+            account.name = name;
+            
+            HMAccountTool.saveAccount(account)
+            
+            }) { (operation, error) -> Void in
+                print("*****请求失败")
+        }
+    
+    }
+    
+    
+    /**
+    *  设置导航栏内容
+    */
+    func setupNav(){
+        
         /* 设置导航栏上面的内容 */
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "friendSearch", image: "navigationbar_friendsearch", hightImage: "navigationbar_friendsearch_highlighted")
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "pop", image: "navigationbar_pop", hightImage: "navigationbar_pop_highlighted")
         
-
-        
         ///* 中间的标题按钮 */
         //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        let titleButton:UIButton = UIButton()
+        let titleButton:HMTitleButton = HMTitleButton()
         
-        titleButton.frame.size.width = 150;
-        titleButton.frame.size.height = 30;
-        //    titleButton.backgroundColor = HWRandomColor;
         
         /// 设置图片和文字
-        titleButton.setTitle("首页", forState: UIControlState.Normal)
-        titleButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-
-        titleButton.titleLabel!.font = UIFont.boldSystemFontOfSize(13.0)
-        titleButton.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
-        titleButton.setImage(UIImage(named: "navigationbar_arrow_up"), forState: UIControlState.Selected)
+        let name = (HMAccountTool.loadAccount()?.name) as? String
         
-        //    titleButton.imageView.backgroundColor = [UIColor redColor];
-        //    titleButton.titleLabel.backgroundColor = [UIColor blueColor];
-        titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
-        titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+        titleButton.setTitle(name ?? "首页", forState: UIControlState.Normal)
+        print("*用户昵称--\(name)")
+        
+        //        titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+        //        titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
         
         /// 监听标题点击
         titleButton.addTarget(self, action: "titleClick:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.navigationItem.titleView = titleButton;
-        // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
-        
 
-        
     }
     
+    // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
+    // 什么情况下建议使用imageEdgeInsets、titleEdgeInsets
+    // 如果按钮内部的图片、文字固定，用这2个属性来设置间距，会比较简单
+    // 标题宽度
+    //    CGFloat titleW = titleButton.titleLabel.width * [UIScreen mainScreen].scale;
+    ////    // 乘上scale系数，保证retina屏幕上的图片宽度是正确的
+    //    CGFloat imageW = titleButton.imageView.width * [UIScreen mainScreen].scale;
+    //    CGFloat left = titleW + imageW;
+    //    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, left, 0, 0);
+    
+
     
     /**
     *  标题点击
@@ -91,7 +140,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     */
     func dropdownMenuDidDismiss(menu: HMDropdownMenu) {
         
-        let titleButton:UIButton = self.navigationItem.titleView as! UIButton
+        let titleButton:HMTitleButton = self.navigationItem.titleView as! HMTitleButton
         
         titleButton.selected = false
         
@@ -104,7 +153,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     */
     func dropdownMenuDidShow(menu: HMDropdownMenu) {
         
-         let titleButton:UIButton = self.navigationItem.titleView as! UIButton
+         let titleButton:HMTitleButton = self.navigationItem.titleView as! HMTitleButton
         
         titleButton.selected = true
         // 让箭头向上
