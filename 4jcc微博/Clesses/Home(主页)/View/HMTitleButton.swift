@@ -10,16 +10,19 @@ import UIKit
 
 class HMTitleButton: UIButton {
 
+    let HMMargin:CGFloat = 10
+    
 
     override init(frame: CGRect) {
         
         super.init(frame: frame)
-        
+        //frame.size.width += HMMargin
        self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-       self.titleLabel!.font = UIFont.boldSystemFontOfSize(13.0)
+       self.titleLabel!.font = UIFont.boldSystemFontOfSize(17.0)
+        self.backgroundColor = UIColor.redColor()
        self.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
        self.setImage(UIImage(named: "navigationbar_arrow_up"), forState: UIControlState.Selected)
-//        self.titleLabel?.backgroundColor = UIColor.redColor()
+    
         ///*****✅先把image调出来.不然一开始标题会偏移
         self.imageView?.backgroundColor = UIColor.clearColor()
 }
@@ -34,17 +37,14 @@ class HMTitleButton: UIButton {
         super.layoutSubviews()
         // 如果仅仅是调整按钮内部titleLabel和imageView的位置，那么在layoutSubviews中单独设置位置即可
     
-        // 1.计算titleLabel的frame
+        /// 1.计算titleLabel的frame
         self.titleLabel!.frame.origin.x = (self.imageView!.frame.origin.x)
-        print("文字的X轴\(self.titleLabel!.frame.origin.x)")
-        print("前\(self.titleLabel!.frame)")
-        // 2.计算imageView的frame
-        self.imageView!.frame.origin.x = CGRectGetMaxX(self.titleLabel!.frame);
-        print("后\(self.titleLabel!.frame)")
-        print("图片的X轴\(self.imageView!.frame.origin.x)")
-        
-        //self.imageView?.frame.origin.x = (self.titleLabel?.frame.origin.x)!
+        /// 2.计算imageView的frame
+        self.imageView!.frame.origin.x = CGRectGetMaxX(self.titleLabel!.frame) + HMMargin
+
 }
+    
+    
 
     ///*****✅重写set方法--就直接计算自己的尺寸
     
@@ -55,6 +55,7 @@ class HMTitleButton: UIButton {
         self.sizeToFit()
     }
     
+    
     ///*****✅重写set方法--就直接计算自己的尺寸
     override func setTitle(title: String?, forState state: UIControlState) {
         
@@ -63,8 +64,21 @@ class HMTitleButton: UIButton {
         // 只要修改了文字，就让按钮重新计算自己的尺寸
         self.sizeToFit()
     }
-    
-    
+    // 目的：想在系统计算和设置完按钮的尺寸后，再修改一下尺寸
+    /**
+    *  重写setFrame:方法的目的：拦截设置按钮尺寸的过程
+    *  如果想在系统设置完控件的尺寸后，再做修改，而且要保证修改成功，一般都是在setFrame:中设置
+    */
+
+
+//   override var frame:CGRect {
+//        
+//        didSet{
+//            
+//            frame.size.width += HMMargin;
+//        }
+//        
+//    }
     
     ///*****✅设置按钮内部title的frame
 //    override func titleRectForContentRect(contentRect: CGRect) -> CGRect {

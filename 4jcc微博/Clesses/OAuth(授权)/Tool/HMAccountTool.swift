@@ -11,7 +11,7 @@ import UIKit
 class HMAccountTool: NSObject {
     
     // 账号的存储路径
-   static let  HMAccountPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last?.stringByAppendingPathComponent("account.archive")
+   static let  HMAccountPath = ((NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last)! as NSString).stringByAppendingPathComponent("account.archive")
 
     /**
     *  存储账号信息
@@ -25,7 +25,7 @@ class HMAccountTool: NSObject {
         account.created_time = NSDate()
     
     // 自定义对象的存储必须用NSKeyedArchiver，不再有什么writeToFile方法
-        NSKeyedArchiver.archiveRootObject(account, toFile:HMAccountPath!)
+        NSKeyedArchiver.archiveRootObject(account, toFile:HMAccountPath)
 
     }
     
@@ -38,7 +38,7 @@ class HMAccountTool: NSObject {
    class func loadAccount() -> HMAccountModel?{
         
     // 加载模型
-        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(HMAccountPath!) as? HMAccountModel
+        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(HMAccountPath) as? HMAccountModel
     
     /* 验证账号是否过期 */
     

@@ -4,7 +4,7 @@
 //
 //  Created by 蒋进 on 15/11/5.
 //  Copyright © 2015年 sijichcai. All rights reserved.
-//
+
 
 import UIKit
     ///*****✅#warning 因为HWTabBar继承自UITabBar，所以称为HWTabBar的代理，也必须实现UITabBar的代理协议
@@ -19,7 +19,7 @@ class HMTabBar: UITabBar {
 
     weak var plusBtn:UIButton!
     
-     var delegateHM:HMTabBarDelegate!
+    var delegateHM:HMTabBarDelegate!
 
 
     
