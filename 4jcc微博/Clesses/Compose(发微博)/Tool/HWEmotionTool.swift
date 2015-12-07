@@ -39,6 +39,34 @@ class HWEmotionTool: NSObject {
 
     }
 
+
+    
+    //通过表情描述 找到对应的表情模型
+    class func emtionWithChs(chs: String) -> HWEmotion?{
+        //遍历默认表情
+        
+        for  emotion in self.defaultEmotions{
+            
+            let emotion:HWEmotion = emotion as! HWEmotion
+            if (emotion.chs! as NSString).isEqual(chs){
+                return emotion
+            }
+        }
+        
+        //遍历浪小花
+        for emotion in self.lxhEmotions{
+            let emotion:HWEmotion = emotion as! HWEmotion
+            if (emotion.chs! as NSString).isEqual(chs){
+                return emotion
+            }
+        }
+        
+        return nil
+    }
+
+    
+    
+    //MARK: - 返回装着HWEmotion模型的数组
     /**
     *  返回装着HWEmotion模型的数组
     */
@@ -48,31 +76,43 @@ class HWEmotionTool: NSObject {
         
         return _recentEmotions
     }
+    
+    static var defaultEmotions:NSArray! = {
+        
+        var ani = NSArray()
+        let path=NSBundle.mainBundle().pathForResource("EmotionIcons/default/info.plist", ofType: nil)
+       
+        ani = HWEmotion.objectArrayWithKeyValuesArray(NSArray(contentsOfFile: path!))
+       
+        return ani
+    }()
+    //emoji表情集合
+    static var emojiEmotions:NSArray! = {
+        
+        var ani = NSArray()
+        let path=NSBundle.mainBundle().pathForResource("EmotionIcons/emoji/info", ofType: "plist")
+        ani = HWEmotion.objectArrayWithFile(path)
+        
+        return ani
 
-    // 加载沙盒中的表情数据
-    //    NSMutableArray *emotions = (NSMutableArray *)[self recentEmotions];
-    //    if (emotions == nil) {
-    //        emotions = [NSMutableArray array];
-    //    }
-    
-    //    [emotions removeObject:emotion];
-    //    for (int i = 0; i<emotions.count; i++) {
-    //        HWEmotion *e = emotions[i];
-    //
-    //        if ([e.chs isEqualToString:emotion.chs] || [e.code isEqualToString:emotion.code]) {
-    //            [emotions removeObject:e];
-    //            break;
-    //        }
-    //    }
-    
-    //    for (HWEmotion *e in emotions) {
-    //        if ([e.chs isEqualToString:emotion.chs] || [e.code isEqualToString:emotion.code]) {
-    //            [emotions removeObject:e];
-    //            break;
-    //        }
-    //    }
-
+    }()
+    //浪小花表情集合
+    static var lxhEmotions:NSArray! = {
+        
+        var ani = NSArray()
+        let path=NSBundle.mainBundle().pathForResource("EmotionIcons/lxh/info.plist", ofType: nil)
+        ani = HWEmotion.objectArrayWithFile(path)
+        
+        return ani
+    }()
     
     
 
+    
+
+
+
+    
+    
+    
 }

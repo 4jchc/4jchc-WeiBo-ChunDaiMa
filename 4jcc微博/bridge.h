@@ -15,3 +15,5 @@
 #import "UIImageView+WebCache.h"
 
 #import "MJRefresh.h"
+
+#import "RegexKitLite.h"

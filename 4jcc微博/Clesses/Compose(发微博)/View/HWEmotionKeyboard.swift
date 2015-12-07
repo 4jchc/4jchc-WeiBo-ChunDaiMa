@@ -40,38 +40,41 @@ class HWEmotionKeyboard: UIView,HWEmotionTabBarDelegate {
             ani.emotions=HWEmotionTool.recentEmotions()
             return ani
         }()
-        
-        
-        
+
         lazy var defaultListView:HWEmotionListView! = {
             
-            let ani = HWEmotionListView()
-            let path=NSBundle.mainBundle().pathForResource("EmotionIcons/default/info.plist", ofType: nil)
-            //ani.emotions = HWEmotion.objectArrayWithFile(path)
-            ani.emotions = HWEmotion.objectArrayWithKeyValuesArray(NSArray(contentsOfFile: path!))
-            //ani.emotions=HWEmotion.objectArrayWithKeyValuesArray(NSArray(contentsOfFile: path!))
+            var ani = HWEmotionListView()
+            // 加载沙盒中的数据
+            ani.emotions = HWEmotionTool.defaultEmotions
+           
             return ani
         }()
-        
+    
         lazy var emojiListView:HWEmotionListView! = {
             
             let ani = HWEmotionListView()
-            let path=NSBundle.mainBundle().pathForResource("EmotionIcons/emoji/info", ofType: "plist")
-            ani.emotions = HWEmotion.objectArrayWithFile(path)
-            //ani.emotions=HWEmotion.objectArrayWithKeyValuesArray(NSArray(contentsOfFile: path!))
+            // 加载沙盒中的数据
+            ani.emotions = HWEmotionTool.emojiEmotions
             return ani
         }()
         
         lazy var lxhListView:HWEmotionListView! = {
             
             let ani = HWEmotionListView()
-            let path=NSBundle.mainBundle().pathForResource("EmotionIcons/lxh/info.plist", ofType: nil)
-            ani.emotions = HWEmotion.objectArrayWithFile(path)
-            //ani.emotions=HWEmotion.objectArrayWithKeyValuesArray(NSArray(contentsOfFile: path!))
+            // 加载沙盒中的数据
+            ani.emotions = HWEmotionTool.lxhEmotions
             return ani
         }()
     
-        
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
         
 //        private var _defaultListView:HWEmotionListView?
