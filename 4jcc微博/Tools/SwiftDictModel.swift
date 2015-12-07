@@ -269,6 +269,7 @@ extension Dictionary {
 }
 
 func printLog<T>(message: T, file: String = __FILE__, method: String = __FUNCTION__, line: Int = __LINE__) {
+    
     print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
 }
 

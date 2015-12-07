@@ -144,8 +144,7 @@ class HMOAuthViewController: UIViewController,UIWebViewDelegate {
         params["code"] = code;
         
         // 3.发送请求
-        
-        mgr.POST("https://api.weibo.com/oauth2/access_token", parameters: params, success: { (_, responseObject ) -> Void in
+        HWHttpTool.post("https://api.weibo.com/oauth2/access_token", params: params, success: { (responseObject ) -> Void in
             ///*****✅ success里的第二个就是字典---
             print("***请求成功-**\(responseObject)")
             MBProgressHUD.hideHUD()
@@ -161,11 +160,12 @@ class HMOAuthViewController: UIViewController,UIWebViewDelegate {
   
 
 
-            }) { (_, error) -> Void in
+            }) { (error) -> Void in
                 
                 MBProgressHUD.hideHUD()
                 print("**请求失败**\(error)")
         }
+  
     }
 
 

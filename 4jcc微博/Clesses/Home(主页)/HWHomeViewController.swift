@@ -1,12 +1,10 @@
 
-
-//
 //  HWHomeViewController.swift
 //  4jcc微博
 //
 //  Created by 蒋进 on 15/11/2.
 //  Copyright © 2015年 sijichcai. All rights reserved.
-//
+
 
 import UIKit
 
@@ -14,25 +12,26 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
 
     /**
     *  微博数组（里面放的都是HWStatusFrame模型，一个HWStatusFrame对象就代表一条微博）
-    */
-    @property (nonatomic, strong) NSMutableArray *statusFrames;
-    - (NSMutableArray *)statusFrames
-    {
-    if (!_statusFrames) {
-    self.statusFrames = [NSMutableArray array];
+    *  将HWStatus模型转为HWStatusFrame模型
+    *///遍历模型赋值新的模型添加到新的数组
+    func stausFramesWithStatuses(statuses:NSArray) ->NSArray{
+        
+        let frames: NSMutableArray  = NSMutableArray()
+        
+        for status in statuses {
+            let f: HWStatusFrame  = HWStatusFrame()
+        f.status = status as? HWStatus;
+        frames.addObject(f)
+        }
+        return frames;
     }
-    return _statusFrames;
-    }
-    
-    
-    
-    
+
     
     /**
     *  微博数组（里面放的都是HWStatus模型，一个HWStatus对象就代表一条微博）
     */
     
-    lazy var statuses:NSMutableArray? = {
+    lazy var statusFrames:NSMutableArray? = {
         
         var statuse = NSMutableArray()
         
@@ -40,8 +39,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     }()
 
 
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,7 +55,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         // 集成上拉刷新控件
         self.setupUpRefresh()
         
-        // 获得未读数
+        //MARK: 获得未读数
         let timer: NSTimer  = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "setupUnreadCount", userInfo: nil, repeats:true)
         // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
@@ -68,60 +66,28 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     *  获得未读数
     */
     func setupUnreadCount() {
-            //    HWLog(@"setupUnreadCount");
-            //    return;
-        // 1.请求管理者
-        let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
-            // 2.拼接请求参数
+
+        // 2.拼接请求参数
         let account:HMAccountModel = HMAccountTool.loadAccount()!
         let params:NSMutableDictionary = NSMutableDictionary()
         
         params["access_token"] = account.access_token;
         params["uid"] = account.uid
-
-        mgr.GET("https://rm.api.weibo.com/2/remind/unread_count.json", parameters: params as NSDictionary, success: { (operation, responseObject) -> Void in
+        
+        
+       
+        HWHttpTool.get("https://rm.api.weibo.com/2/remind/unread_count.json", params: params as NSDictionary, success: { (responseObject) -> Void in
             
             
-            // 微博的未读数
-            //        int status = [responseObject[@"status"] intValue];
-            // 设置提醒数字
-            //        self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", status];
-            
-            // @20 --> @"20"
-            // NSNumber --> NSString
-            // 设置提醒数字(微博的未读数)
-
-
-//            if let status = (responseObject["status"]) {
-//                print("*****\(status)")
-//                if status?.isKindOfClass(NSNumber.classForCoder()) == true || status?.isKindOfClass(NSString.classForCoder()) == true && status?.integerValue != 0  {//非0情况
-//                
-//                    self.tabBarItem.badgeValue = status?.stringValue
-//                    UIApplication.sharedApplication().applicationIconBadgeNumber = status!.integerValue;
-//                    
-//                }
-////                else if status?.isKindOfClass(NSString.classForCoder()) == true && status?.integerValue != 0 {
-////                    
-////                    self.tabBarItem.badgeValue = status?.stringValue
-////                    UIApplication.sharedApplication().applicationIconBadgeNumber = status!.integerValue
-////                }
-//                else { // 如果是0，得清空数字
-//                    
-//                    self.tabBarItem.badgeValue = nil;
-//                    UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-//                }
-//                
-//            }
-            
-           // 设置提醒数字(微博的未读数)
+           //MARK:  设置提醒数字(微博的未读数)
             let status = (responseObject["status"])!!.description as NSString
             print("*****\(status)")
-            if status.isEqualToString("0") {
+            if status.isEqualToString("0") {// 如果是0，得清空数字
                 
                 self.tabBarItem.badgeValue = nil;
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 0
                 print("**UIApplication.sharedApplication().applicationIconBadgeNumber***\(UIApplication.sharedApplication().applicationIconBadgeNumber)")
-            }else{//
+            }else{//非0情况
                 
                 self.tabBarItem.badgeValue = status as String
                 
@@ -129,24 +95,30 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
                 print("**UIApplication.sharedApplication().applicationIconBadgeNumber***\(UIApplication.sharedApplication().applicationIconBadgeNumber)")
         }
 
-            }) { (operation, error) -> Void in
+            }) { ( error) -> Void in
                 print("*****请求失败")
                
         }
 
 }
     
-    /**
-    *  集成上拉刷新控件
-    */
+
+    //MARK: - 集成上拉刷新控件
     func setupUpRefresh(){
         
-        let footer = HWLoadMoreFooter.footer()
+//        let footer = HWLoadMoreFooter.footer()
+//
+//        footer.hidden = true
+//        
+//        self.tableView.tableFooterView = footer;
+        
 
-        footer.hidden = true
+        self.tableView.mj_footer = MJRefreshAutoFooter(refreshingBlock: { () -> Void in
+            self.loadMoreStatus()
+        })
+      
         
-     self.tableView.tableFooterView = footer;
-        
+        //[self.tableView addFooterWithTarget:self action:@selector(loadMoreStatus)];
     }
     
 
@@ -155,98 +127,108 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     */
     func setupDownRefresh(){
         
-        // 1.添加刷新控件
-            let control:UIRefreshControl = UIRefreshControl()
-      
-        // 只有用户通过手动下拉刷新，才会触发UIControlEventValueChanged事件
-            control.addTarget(self, action: "loadNewStatus:", forControlEvents: UIControlEvents.ValueChanged)
+//        // 1.添加刷新控件
+//        let control:UIRefreshControl = UIRefreshControl()
+//      
+//        // 只有用户通过手动下拉刷新，才会触发UIControlEventValueChanged事件
+//        control.addTarget(self, action: "loadNewStatus:", forControlEvents: UIControlEvents.ValueChanged)
+//        
+//        self.tableView.addSubview(control)
+//        
+//        // 2.马上进入刷新状态(仅仅是显示刷新状态，并不会触发UIControlEventValueChanged事件)
+//            
+//        control.beginRefreshing()
+//        
+//        // 3.马上加载数据
+//        self.loadNewStatus(control)
         
-        self.tableView.addSubview(control)
         
-        // 2.马上进入刷新状态(仅仅是显示刷新状态，并不会触发UIControlEventValueChanged事件)
-            
-        control.beginRefreshing()
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
+            self.loadNewStatus()
+        })
+        self.tableView.mj_header.beginRefreshing()
         
-        // 3.马上加载数据
-        self.loadNewStatus(control)
+        //self.tableView.tableHeaderView = MJRefreshNormalHeader
+        
+        
+        
+        
         
     }
     
     
     /**
     *  UIRefreshControl进入刷新状态：加载最新的数据
-    */
-    func loadNewStatus(control:UIRefreshControl){
+    */ //func loadNewStatus(control:UIRefreshControl){
+        
+    func loadNewStatus(){
         
         
         // https://api.weibo.com/2/users/show.json
         // access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
         // uid	false	int64	需要查询的用户ID。
         // 1.请求管理者
-        let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
+        //let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
         
         // 2.拼接请求参数
         let account:HMAccountModel = HMAccountTool.loadAccount()!
         let params:NSMutableDictionary = NSMutableDictionary()
         
         params["access_token"] = account.access_token;
-        params["count"] = 12
+        //params["count"] = 12
         
-        // 取出最前面的微博（最新的微博，ID最大的微博）
-        let firstStatus = self.statuses!.firstObject as? HWStatus
-      
+        // 取出最前面的微博（最新的微博，ID最大的微博）//❌ as? HWStatusFrame写成HWStatus,所以一直显示刷新20条
+        let firstStatus = self.statusFrames!.firstObject as? HWStatusFrame
         if firstStatus != nil {
-            
             // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0
             
-            params["since_id"] = firstStatus!.idstr;
+            params["since_id"] = firstStatus!.status!.idstr //firstStatus!.idstr;
         }
 
 
         // 3.发送请求
         //https://api.weibo.com/2/statuses/friends_timeline.json
 
-        mgr.GET("https://api.weibo.com/2/statuses/friends_timeline.json", parameters: params as NSDictionary, success: { (operation, responseObject) -> Void in
+        HWHttpTool.get("https://api.weibo.com/2/statuses/friends_timeline.json", params: params as NSDictionary, success: { (responseObject) -> Void in
 
+            let dictArray:NSArray = responseObject["statuses"] as! NSArray
 
-                let dictArray:NSArray = responseObject["statuses"] as! NSArray
-                print("*****\(dictArray)")
-                let arrayM = (HWStatus.objectArrayWithKeyValuesArray(dictArray as [AnyObject]) as AnyObject) //as? NSMutableArray)!
-            print("*****\(arrayM)")
-            self.statuses = arrayM as? NSMutableArray
+            /** 将 "微博字典"数组 转为 "微博模型"数组*/
+            let newStatuses = (HWStatus.objectArrayWithKeyValuesArray(dictArray as [AnyObject]) as AnyObject) //as? NSMutableArray)!
+            // 将 HWStatus数组 转为 HWStatusFrame数组
+            let newFrames = self.stausFramesWithStatuses(newStatuses as! NSArray)
 
-
+            // 将最新的微博数据，添加到总数组的最前面
+            let range: NSRange = NSMakeRange(0, newFrames.count);
+            let set: NSIndexSet = NSIndexSet(indexesInRange: range)
+            self.statusFrames!.insertObjects(newFrames as [AnyObject],atIndexes:set)
+   
             
             // 刷新表格
             self.tableView.reloadData()
 
-            control.endRefreshing()
+            // 结束刷新
+            self.tableView.mj_header.endRefreshing()
+            
         
 
-            // 显示最新微博的数量
-            
-            self.showNewStatusCount(self.statuses!.count)
+            // 显示最新微博的数量(刚刚加载转换的数组个数)
+            self.showNewStatusCount(newStatuses.count)
 
 
-            }) { (operation, error) -> Void in
+            }) { (error) -> Void in
                 print("*****请求失败")
-                control.endRefreshing()
+                self.tableView.mj_header.endRefreshing()
         }
-
 
     }
     
-    
-    
-    
-    
-    
-    /**
-    *  加载更多的微博数据
-    */
+
+    /** 加载更多的微博数据 */
+    //uuu
     func loadMoreStatus(){
         // 1.请求管理者
-        let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
+        //let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
         
         // 2.拼接请求参数
         // 2.拼接请求参数
@@ -257,44 +239,47 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         
         
         // 取出最后面的微博（最新的微博，ID最大的微博）
-            
-            let lastStatus = self.statuses!.lastObject as? HWStatus
+        //不可以 as? HWStatus
+        //    let lastStatus = self.statusFrames!.lastObject as? HWStatus
+            let lastStatus = self.statusFrames!.lastObject as? HWStatusFrame
         if lastStatus != nil {
             
             // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
             // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
-            params["max_id"] = (lastStatus!.idstr?.integerValue)! - 1
+            params["max_id"] = (lastStatus!.status!.idstr?.integerValue)! - 1
+                
         }
  
         // 3.发送请求
         //https://api.weibo.com/2/statuses/friends_timeline.json
         
-        mgr.GET("https://api.weibo.com/2/statuses/friends_timeline.json", parameters: params as NSDictionary, success: { (operation, responseObject) -> Void in
-            
+        HWHttpTool.get("https://api.weibo.com/2/statuses/friends_timeline.json", params: params as NSDictionary, success: { (responseObject) -> Void in
             
             let dictArray:NSArray = responseObject["statuses"] as! NSArray
-            print("*****\(dictArray)")
+
             // 将 "微博字典"数组 转为 "微博模型"数组
             let newStatuses = (HWStatus.objectArrayWithKeyValuesArray(dictArray as [AnyObject]) as AnyObject) //as? NSMutableArray)!
-            self.statuses = newStatuses as? NSMutableArray
+            // 将 HWStatus数组 转为 HWStatusFrame数组
+            let newFrames = self.stausFramesWithStatuses(newStatuses as! NSArray)
             
             // 将更多的微博数据，添加到总数组的最后面
-            self.statuses!.addObjectsFromArray(newStatuses as! [AnyObject])
+            self.statusFrames!.addObjectsFromArray(newFrames as [AnyObject])
 
             // 刷新表格
             self.tableView.reloadData()
             
             // 结束刷新(隐藏footer)
-            self.tableView.tableFooterView!.hidden = true
+            self.tableView.mj_footer.endRefreshing()
+           // self.tableView.tableFooterView!.hidden = true
             
-            }) { (operation, error) -> Void in
+            }) { (error) -> Void in
                 print("*****请求失败")
                 // 结束刷新(隐藏footer)
-                self.tableView.tableFooterView!.hidden = true
+                //self.tableView.tableFooterView!.hidden = true
+                self.tableView.mj_footer.endRefreshing()
 
         }
         
-
     }
     
     
@@ -309,11 +294,9 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         // 刷新成功(清空图标数字)
         self.tabBarItem.badgeValue = nil;
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-        
-        
-        
+
         // 1.创建label
-            let label:UILabel = UILabel()
+        let label:UILabel = UILabel()
 
         label.backgroundColor = UIColor(patternImage: UIImage(named: "timeline_new_status_background")!)
         label.frame.size.width = UIScreen.mainScreen().bounds.size.width
@@ -343,6 +326,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         let duration:Double = 1.0; // 动画的时间
         UIView.animateWithDuration(duration, animations: { () -> Void in
             //    [label removeFromSuperview];
+            
             label.transform = CGAffineTransformMakeTranslation(0, label.frame.size.height)
             
             
@@ -382,7 +366,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     // access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
     // uid	false	int64	需要查询的用户ID。
     // 1.请求管理者
-        let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
+    //let mgr:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
   
     // 2.拼接请求参数
         let account:HMAccountModel = HMAccountTool.loadAccount()!
@@ -393,7 +377,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     
     // 3.发送请求
         
-        mgr.GET("https://api.weibo.com/2/users/show.json", parameters: params, success: { (operation, responseObject) -> Void in
+        HWHttpTool.get("https://api.weibo.com/2/users/show.json", params: params, success: { (responseObject) -> Void in
             /// 标题按钮
             let titleButton:UIButton = self.navigationItem.titleView as! UIButton
             /// 设置名字
@@ -408,7 +392,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
             account.name = name
             HMAccountTool.saveAccount(account)
             
-            }) { (operation, error) -> Void in
+            }) { (error) -> Void in
                 print("*****请求失败")
         }
     
@@ -423,14 +407,14 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     func setupNav(){
         
         /* 设置导航栏上面的内容 */
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "friendSearch", image: "navigationbar_friendsearch", hightImage: "navigationbar_friendsearch_highlighted")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.ItemWithImageTarget(self, action: "friendSearch", image: "navigationbar_friendsearch", hightImage: "navigationbar_friendsearch_highlighted")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.addImageTarget(self, action: "pop", image: "navigationbar_pop", hightImage: "navigationbar_pop_highlighted")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.ItemWithImageTarget(self, action: "pop", image: "navigationbar_pop", hightImage: "navigationbar_pop_highlighted")
         
-        ///* 中间的标题按钮 */
+        ///* 中间的标题按钮 */继承自定义按钮
         //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         let titleButton:HMTitleButton = HMTitleButton()
-        
+        //self.navigationItem.rightBarButtonItem?.enabled = false
         
         /// 设置图片和文字
         let name = (HMAccountTool.loadAccount()?.name) as? String
@@ -447,7 +431,6 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         self.navigationItem.titleView = titleButton;
 
     }
-    
     // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
     // 什么情况下建议使用imageEdgeInsets、titleEdgeInsets
     // 如果按钮内部的图片、文字固定，用这2个属性来设置间距，会比较简单
@@ -458,27 +441,23 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     //    CGFloat left = titleW + imageW;
     //    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, left, 0, 0);
     
-
-    
-    /**
+/**
     *  标题点击
     */
     func titleClick(titleButton:UIButton){
-    // 1.创建下拉菜单
-        let menu:HMDropdownMenu = HMDropdownMenu.menu()
-        menu.delegate = self
-    // 2.设置内容
-        let vc:HWTitleMenuViewController = HWTitleMenuViewController()
-
-    vc.view.frame.size.height = 150;
-    vc.view.frame.size.width = 150;
-    menu.contentController = vc;
-    
-    // 3.显示
+        // 1.创建下拉菜单
+            let menu:HMDropdownMenu = HMDropdownMenu.menu()
+            menu.delegate = self
+        // 2.设置内容
+            let vc:HWTitleMenuViewController = HWTitleMenuViewController()
+        
+        vc.view.frame.size.height = 150;
+        vc.view.frame.size.width = 150;
+        menu.contentController = vc;
+        
+        // 3.显示
         menu.showFrom(titleButton)
     }
-
-
     
     
     func friendSearch()
@@ -491,7 +470,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
     NSLog("pop");
     }
     
-    ///*****✅#pragma mark - HWDropdownMenuDelegate
+    //MARK: - HWDropdownMenuDelegate
     /**
     *  下拉菜单被销毁了
     */
@@ -514,7 +493,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         
         titleButton.selected = true
         // 让箭头向上
-        //    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+        //   [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     }
 
     
@@ -528,84 +507,62 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
 
     // MARK: - Table view data source
 
-    ///*****✅#pragma mark - Table view data source
-
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        //print("*****\(self.statuses!.count)\n\n\n")
-        return  self.statuses?.count ?? 0
+        
+        return  self.statusFrames?.count ?? 0
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let ID:String = "cell"
+
+        // 获得cell
+        let cell:HWStatusCell  = HWStatusCell.cellWithTableView(tableView)
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(ID as String)
-       
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: ID as String)
-        }
+        // 给cell传递模型数据
+        cell.statusFrame = self.statusFrames![indexPath.row] as? HWStatusFrame;
         
+        return cell;
         
-        // 取出这行对应的微博字典
-        
-        if statuses != nil {
-
-            let status = self.statuses![indexPath.row] as! HWStatus
-
-            print("*****\(self.statuses)")
-            cell!.textLabel?.text = status.text as? String
-
-            let user = (status.user! as HWUser)
-
-            
-            cell!.textLabel?.text = user.name as String
-            
-            // 设置微博的文字
-            cell!.detailTextLabel?.text = status.text as? String
-            
-            // 设置头像
-            let placehoder:UIImage = UIImage(named: "avatar_default_small")!
-            cell?.imageView?.sd_setImageWithURL(NSURL(string: user.profile_image_url as String), placeholderImage: placehoder)
-        }
-
-        return cell!
     }
     
     
     
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
+//    override func scrollViewDidScroll(scrollView: UIScrollView) {
+//
+//       
+//        // 如果tableView还没有数据，就直接返回
+//        if (self.statusFrames!.count == 0) || self.tableView.tableFooterView?.hidden == true {
+//            
+//            return
+//        }
+//        //    if ([self.tableView numberOfRowsInSection:0] == 0) return;
+//        
+//        // 当最后一个cell完全显示在眼前时，contentOffset的y值
+//        let offsetY:CGFloat = scrollView.contentOffset.y
+//        
+//        if let taheight = self.tableView.tableFooterView?.frame.size.height {
+//            
+//            let judgeOffsetY:CGFloat = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.frame.size.height - taheight
+//            
+//            if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
+//                // 显示footer
+//                self.tableView.tableFooterView?.hidden = false
+//                // 加载更多的微博数据
+//                self.loadMoreStatus()
+//                print("加载更多的微博数据")
+//            }
+//            
+//            
+//        }
 
-       
-        // 如果tableView还没有数据，就直接返回
-        if (self.statuses!.count == 0) || self.tableView.tableFooterView?.hidden == true {
-            
-            return
-        }
-        //    if ([self.tableView numberOfRowsInSection:0] == 0) return;
-        
-        // 当最后一个cell完全显示在眼前时，contentOffset的y值
-        let offsetY:CGFloat = scrollView.contentOffset.y
-        print("*****\(self.tableView.tableFooterView?.frame.size.height)")
-        
-        if let taheight = self.tableView.tableFooterView?.frame.size.height {
-            
-            let judgeOffsetY:CGFloat = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.frame.size.height - taheight
-            
-            if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
-                // 显示footer
-                self.tableView.tableFooterView?.hidden = false
-                // 加载更多的微博数据
-                print("加载更多的微博数据")
-            }
-            
-            
-        }
-
-    }
+//    }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let frame: HWStatusFrame  = self.statusFrames![indexPath.row] as! HWStatusFrame;
+        return frame.cellHeight!;
+    }
     /*
     contentInset：除具体内容以外的边框尺寸
     contentSize: 里面的具体内容（header、cell、footer），除掉contentInset以外的尺寸

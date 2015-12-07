@@ -20,34 +20,6 @@ import UIKit
 ///*****✅自定义--BarButtonItem 
 // 1.增加自定义图片的高亮和普通状态
 // 2.添加行为action
-extension UIBarButtonItem{
-    
-    /**
-    *  创建一个item
-    *
-    *  @param target    点击item后调用哪个对象的方法
-    *  @param action    点击item后调用target的哪个方法
-    *  @param image     图片
-    *  @param highImage 高亮的图片
-    *
-    *  @return 创建完的item
-    */
-   class func addImageTarget(target:AnyObject?,action:Selector,image:NSString,hightImage:NSString) ->UIBarButtonItem{
-        
-        let btn:UIButton = UIButton(type: UIButtonType.Custom)
-        btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
-        
-        // 设置图片
-        btn.setBackgroundImage(UIImage(named: image as String), forState: UIControlState.Normal)
-        btn.setBackgroundImage(UIImage(named: hightImage as String), forState: UIControlState.Highlighted)
-        
-        // 设置尺寸
-        btn.frame.size = btn.currentBackgroundImage!.size;
-        
-        return UIBarButtonItem(customView: btn)
-        
-    }
-}
 
 
 
@@ -113,38 +85,6 @@ extension UIBarButtonItem{
 
 
 
-///*✅************************💗 UIColor *******************************
-
-
-///*****✅随机颜色color
-extension UIColor {
-    
-    class func random() -> UIColor {
-    /*
-    颜色有两种表现形式 RGB RGBA
-    RGB 24
-    R,G,B每个颜色通道8位
-    8的二进制 255
-    R,G,B每个颜色取值 0 ~255
-    120 / 255.0
-    */
-        let r:CGFloat = CGFloat(arc4random_uniform(UInt32(256))) / 255.0
-        let g:CGFloat = CGFloat(arc4random_uniform(UInt32(256))) / 255.0
-        let b:CGFloat = CGFloat(arc4random_uniform(UInt32(256))) / 255.0
-        
-        return UIColor(red: r, green: g, blue: b, alpha: 1)
-    }
-    
-    //UIColor(red: <#123#>/255.0, green: <#123#>/255.0, blue: <#123#>/255.0, alpha: 1.0)
-    
-   class func RGB(r:CGFloat,_ g:CGFloat, _ b:CGFloat)->UIColor{
-        
-        
-        return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
-    }
-    
-}
-
 
 
 ///*✅************************💗 UITextField *******************************
@@ -178,51 +118,6 @@ extension UIColor {
 //    }
 //    
 //}
-
-
-
-///*✅************************💗 UIWindow *******************************
-
-extension UIWindow{
-    
-    
-     func switchRootViewController(){
-        
-        /// 设置根控制器
-        let key:NSString = "CFBundleVersion"
-        // 上一次的使用版本（存储在沙盒中的版本号）
-        
-        
-        let lastVersion = NSUserDefaults.standardUserDefaults().objectForKey(key as String) as? String
-        
-        // 当前软件的版本号（从Info.plist中获得）
-        
-        let infoDict:NSDictionary = NSBundle.mainBundle().infoDictionary!
-        
-        let currentVersion = infoDict.objectForKey(key as String) as! String
-        
-      
-        ////*****✅ 加class是类方法类方法无法使用self  所以改为实例方法
-        if (currentVersion == lastVersion) { // 版本号相同：这次打开和上次打开的是同一个版本
-            
-            self.rootViewController = HWTabBarViewController()
-            
-        } else { // 这次打开的版本和上一次不一样，显示新特性
-            
-            self.rootViewController = HMNewfeatureViewController()
-            // 将当前的版本号存进沙盒
-            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: key as String)
-            
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
-        }
-        
-    }
-    
-    
-}
-
-
 
 
 

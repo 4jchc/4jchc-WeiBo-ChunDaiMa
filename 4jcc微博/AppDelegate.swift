@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         sendNotification()
         // 1.创建窗口
-        
+    
         self.window = UIWindow()
         
         self.window!.frame = UIScreen.mainScreen().bounds
@@ -28,12 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
 //        self.window!.rootViewController = HWTabBarViewController()
 
-        // 2.设置根控制器
-       // let account = HMAccountTool.loadAccount() //as? HMAccountModel
-        //if let account = HMAccountTool.loadAccount(){
         if  HMAccountTool.loadAccount() != nil {
-            
-       // if (account == false)
+
          // 之前已经登录成功过
             self.window?.switchRootViewController()
             

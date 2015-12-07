@@ -67,7 +67,7 @@ class HMNewfeatureViewController: UIViewController ,UIScrollViewDelegate{
         
         pageControl.numberOfPages = HWNewfeatureCount
         pageControl.backgroundColor = UIColor.redColor()
-        pageControl.pageIndicatorTintColor = UIColor.RGB(189, 189, 189)
+        pageControl.pageIndicatorTintColor = UIColor.RGB(189, 189, 189, 1.0)
         pageControl.currentPageIndicatorTintColor = UIColor.orangeColor()
      
         pageControl.center.x = scrollW * 0.5;
@@ -92,7 +92,7 @@ class HMNewfeatureViewController: UIViewController ,UIScrollViewDelegate{
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let page:Double = Double(scrollView.contentOffset.x) / Double(scrollView.frame.size.width)
         
-        // 四舍五入计算出页码
+        // 四舍五入计算出页码 Int(page + 0.5)
         
         self.pageControl.currentPage = Int(page + 0.5);
         // 1.3四舍五入 1.3 + 0.5 = 1.8 强转为整数(int)1.8= 1
@@ -164,13 +164,14 @@ class HMNewfeatureViewController: UIViewController ,UIScrollViewDelegate{
         
         startBtn.setBackgroundImage(UIImage(named: "new_feature_finish_button_highlighted"), forState: UIControlState.Highlighted)
     
-    startBtn.frame.size = startBtn.currentBackgroundImage!.size
+        startBtn.frame.size = startBtn.currentBackgroundImage!.size
         
-    startBtn.center.x = shareBtn.center.x
-    startBtn.center.y = imageView.frame.size.height * 0.75;
+        startBtn.center.x = shareBtn.center.x
+        startBtn.center.y = imageView.frame.size.height * 0.75;
         startBtn.setTitle("开始微博", forState: UIControlState.Normal)
         startBtn.addTarget(self, action: "startClick", forControlEvents: UIControlEvents.TouchUpInside)
         imageView.addSubview(startBtn)
+        
         
     }
     
@@ -178,8 +179,8 @@ class HMNewfeatureViewController: UIViewController ,UIScrollViewDelegate{
     
     func shareClick(shareBtn:UIButton){
         
-    // 状态取反
-    shareBtn.selected = !shareBtn.selected
+        // 状态取反
+        shareBtn.selected = !shareBtn.selected
         
     }
     
@@ -209,6 +210,8 @@ class HMNewfeatureViewController: UIViewController ,UIScrollViewDelegate{
     deinit{
         print("\(self.classForCoder)")
         print("*****-dealloc")
+        WBLog.Log("\(self.classForCoder)")
+        
     }
     
     

@@ -43,7 +43,7 @@ class HMSearchBar: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
-    class func addSeachBar()->HMSearchBar {
+    class func SeachBar()->HMSearchBar {
         
         return self.init()
     }

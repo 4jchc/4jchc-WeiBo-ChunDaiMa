@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HMTitleMenuViewControllerTableViewController: UITableViewController {
+class HMTitleMenuViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

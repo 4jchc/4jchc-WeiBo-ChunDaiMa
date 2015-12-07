@@ -17,7 +17,7 @@ class HWProfileViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "设置",style: UIBarButtonItemStyle.Done, target: self, action: "setting")
          self.navigationItem.rightBarButtonItem?.enabled = false
         
-        let seachbar:HMSearchBar = HMSearchBar.addSeachBar()
+        let seachbar:HMSearchBar = HMSearchBar.SeachBar()
         seachbar.frame.size.width = 300
         seachbar.frame.size.height = 30
         seachbar.frame.origin.x = 21

@@ -54,9 +54,9 @@ class HMAccountTool: NSObject {
     
         let expires_in:Int = account!.expires_in.integerValue
     
-    /// 获得过期时间
+        /// 获得过期时间
         
-    let expiresTime:NSDate = (account!.created_time).dateByAddingTimeInterval(Double(expires_in))
+        let expiresTime:NSDate = (account!.created_time).dateByAddingTimeInterval(Double(expires_in))
     
     
     

@@ -19,7 +19,6 @@ class HWTabBarViewController: UITabBarController,HMTabBarDelegate{
         let home:HWHomeViewController = HWHomeViewController()
         self.addChildVc(home, title: "首页", image: "tabbar_home", selectedImage: "tabbar_home_selected")
         
-        
         let messageCenter:HWMessageCenterViewController = HWMessageCenterViewController()
         self.addChildVc(messageCenter, title: "消息", image: "tabbar_message_center", selectedImage: "tabbar_message_center_selected")
         
@@ -29,15 +28,27 @@ class HWTabBarViewController: UITabBarController,HMTabBarDelegate{
         let profile:HWProfileViewController = HWProfileViewController()
         self.addChildVc(profile, title: "我", image: "tabbar_profile", selectedImage: "tabbar_profile_selected")
         
-        ////*****✅ 2.更换系统自带的tabbar
+        //MARK: ✅ 2.更换系统自带的tabbar
         //    self.tabBar = [[HWTabBar alloc] init];
         let tabBar:HMTabBar = HMTabBar()
         tabBar.delegateHM = self;
         self.setValue(tabBar, forKeyPath: "tabBar")
-     
         //    self.tabBar = tabBar;
         
+        /*
+        [self setValue:tabBar forKeyPath:@"tabBar"];相当于self.tabBar = tabBar;
+        [self setValue:tabBar forKeyPath:@"tabBar"];这行代码过后，tabBar的delegate就是HWTabBarViewController
+        说明，不用再设置tabBar.delegate = self;
+        */
         
+        /*
+        1.如果tabBar设置完delegate后，再执行下面代码修改delegate，就会报错
+        tabBar.delegate = self;
+        
+        2.如果再次修改tabBar的delegate属性，就会报下面的错误
+        错误信息：Changing the delegate of a tab bar managed by a tab bar controller is not allowed.
+        错误意思：不允许修改TabBar的delegate属性(这个TabBar是被TabBarViewController所管理的)
+        */
     }
 
     
@@ -53,8 +64,6 @@ class HWTabBarViewController: UITabBarController,HMTabBarDelegate{
     *  @param selectedImage 选中的图片
     */
     func addChildVc(childVc:UIViewController,title:NSString ,image:NSString, selectedImage:NSString){
-        
-        
         // 设置文字的样式
         let normalcolor = UIColor(red: 123/255.0, green: 123/255.0, blue: 123/255.0, alpha: 1.0)
         
@@ -83,30 +92,25 @@ class HWTabBarViewController: UITabBarController,HMTabBarDelegate{
        // childVc.view.backgroundColor = UIColor.random()
         
         
-        ////*****✅/ 先给外面传进来的小控制器 包装 一个导航控制器
+        //MARK: ✅ 先给外面传进来的小控制器 包装 一个导航控制器
         let nav:HWNavigationController = HWNavigationController(rootViewController: childVc)
 
         /// 添加为子控制器
         self.addChildViewController(nav)
-
-        
-        
+    
     }
     
     ///*****✅#pragma mark - HWTabBarDelegate代理方法
     
     func tabBarDidClickPlusButton(tabBar:HMTabBar){
         
-        let vc:UIViewController = UIViewController()
-        vc.view.backgroundColor = UIColor.redColor()
-        self.presentViewController(vc, animated: true, completion: nil)
-
+        let vc:HWComposeViewController = HWComposeViewController()
+        let nav: HWNavigationController = HWNavigationController(rootViewController: vc)
+        self.presentViewController(nav, animated: true, completion: nil)
+       
     }
     
- 
-    
-    
-    
+
 
     
 

@@ -35,7 +35,6 @@ class HMAccountModel: NSObject ,NSCoding{
     
     
     
-    
    class func accountWithDict(dict:NSDictionary)->HMAccountModel{
         
         let account:HMAccountModel = HMAccountModel()
@@ -44,7 +43,7 @@ class HMAccountModel: NSObject ,NSCoding{
         account.uid = dict["uid"] as! NSString
         account.expires_in = dict["expires_in"] as! NSNumber
     
-        ///*****✅调用此方法时就获得账号存储的时间（accessToken的产生时间）
+        //MARK:  ✅调用此方法时就获得账号存储的时间（accessToken的产生时间）
         account.created_time = NSDate()
     
         return account
@@ -84,17 +83,12 @@ class HMAccountModel: NSObject ,NSCoding{
             aCoder.encodeObject(self.expires_in, forKey: "expires_in")
             aCoder.encodeObject(self.uid, forKey: "uid")
             
-            
             aCoder.encodeObject(self.created_time, forKey: "created_time")
             aCoder.encodeObject(self.name, forKey: "name")
             print("*****我取模型了")
         
 
     }
-
-
-
-    
 
 
 }

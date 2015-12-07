@@ -14,7 +14,7 @@ class HWDiscoverViewController: UITableViewController {
         super.viewDidLoad()
         
 
-        let seach:HMSearchBar = HMSearchBar.addSeachBar()
+        let seach:HMSearchBar = HMSearchBar.SeachBar()
         seach.frame.size.height = 30
         seach.frame.size.width = 300
         self.navigationItem.titleView = seach
