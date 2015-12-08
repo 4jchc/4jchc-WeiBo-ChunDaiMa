@@ -123,12 +123,14 @@ class HWStatusFrame: NSObject {
           
             let maxW:CGFloat = cellW - 2 * contentX
             ///*****✅宽度要限制.不然不会换行.=屏幕的宽度-2个边距的宽度
-            let contentSize:CGSize = status!.text!.sizeWithFont(HWStatusCellContentFont, maxW: maxW)
+            //TODO:会报错 status!.attributedText?没有值(因为isEmotions)
+            //let contentSize:CGSize = status!.text!.sizeWithFont(HWStatusCellContentFont, maxW: maxW)
+            print("*****\(status!.attributedText!)")
+            let contentSize:CGSize = (status!.attributedText?.boundingRectWithSize(CGSizeMake(maxW, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil).size)!
             
-
+            //let contentSize:CGSize = CGSizeMake(300, 50)
             self.contentLabelF = CGRectMake(contentX, contentY,contentSize.width, contentSize.height)
-            
-            
+
             /** 配图 */
             var originalH: CGFloat = 0;
             print("配图个数\(status!.pic_urls!.count)")
@@ -157,25 +159,33 @@ class HWStatusFrame: NSObject {
             
             
           
+            
+            
+            
+            
+            
+            
+            
+            
+            
             //MARK: - 被转发微博
             /* 被转发微博 */
             if (status!.retweeted_status != nil) {
                 let retweeted_status: HWStatus  = status!.retweeted_status!;
                 //print("*****\(retweeted_status.user!)")//TODO:如果微博被删会提示错误!
-                let retweeted_status_user: HWUser = retweeted_status.user!
+                //let retweeted_status_user: HWUser = retweeted_status.user!
                 
                 
             /** 被转发微博正文 */
             let retweetContentX: CGFloat  = HWStatusCellBorderW;
             let retweetContentY: CGFloat  = HWStatusCellBorderW;
-            let retweetContent: NSString = "@\(retweeted_status_user.name) : \(retweeted_status.text!)"
+            //let retweetContent: NSString = "@\(retweeted_status_user.name) : \(retweeted_status.text!)"
                 
            // let retweetContent: NSString  = NSString(format: "@%@ : %@", retweeted_status_user.name, retweeted_status.text!)
-            let retweetContentSize: CGSize = retweetContent.sizeWithFont(HWStatusCellRetweetContentFont, maxW: maxW)
-                
+           // let retweetContentSize: CGSize = retweetContent.sizeWithFont(HWStatusCellRetweetContentFont, maxW: maxW)
+            let retweetContentSize: CGSize = (status!.retweetedAttributedText?.boundingRectWithSize(CGSizeMake(maxW, CGFloat.max), options:NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil).size)!
+                 //let retweetContentSize:CGSize = CGSizeMake(300, 50)
             self.retweetContentLabelF = CGRectMake(retweetContentX, retweetContentY, retweetContentSize.width, retweetContentSize.height)
-
-            
 
             
             /** 被转发微博配图 */
@@ -210,6 +220,12 @@ class HWStatusFrame: NSObject {
                     toolbarY = CGRectGetMaxY(self.originalViewF!);
                 }
                     
+            
+            
+            
+            
+            
+            
             
             
             /** 工具条 */

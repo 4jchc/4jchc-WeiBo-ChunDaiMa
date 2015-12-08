@@ -35,14 +35,14 @@ class HWStatusCell: UITableViewCell {
     //来源 /
     var sourceLabel:UILabel?
     //正文 /
-    var contentLabel:UILabel?
+    var contentLabel:HWStatusTextView?
     
     
     //MARK: -  转发微博
     /** 转发微博整体 */
     var retweetView:UIView!
     /** 转发微博正文 + 昵称 */
-    var retweetContentLabel:UILabel!
+    var retweetContentLabel:HWStatusTextView!
     /** 转发配图 */
     var retweetPhotosView:HWStatusPhotosView!
     /** 工具条 */
@@ -115,16 +115,16 @@ class HWStatusCell: UITableViewCell {
             self.sourceLabel!.frame=CGRectMake(sourceX, sourceY, sourceSize.width, sourceSize.height)
             self.sourceLabel!.text=status.source as String
 
-  
+
                 /** 正文 */
-                self.contentLabel!.text = status.text as? String
+                self.contentLabel!.attributedText = status.attributedText
                 self.contentLabel!.frame = statusFrame!.contentLabelF!
             
             /** 被转发的微博 */
             
             if(status.retweeted_status != nil){
                 let retweeted_status:HWStatus=status.retweeted_status!
-                let retweeted_status_user:HWUser=retweeted_status.user!
+               // let retweeted_status_user:HWUser=retweeted_status.user!
                 
                 self.retweetView.hidden=false
                 
@@ -132,11 +132,13 @@ class HWStatusCell: UITableViewCell {
                 self.retweetView.frame=statusFrame!.retweetViewF!
                 
                 /** 被转发的微博正文 */
-                let retweetContent="@\(retweeted_status_user.name):\(retweeted_status.text!)"
+                //let retweetContent="@\(retweeted_status_user.name):\(retweeted_status.text!)"
           
-                self.retweetContentLabel.text = retweetContent
+                self.retweetContentLabel.attributedText = status.retweetedAttributedText;
                 
                 self.retweetContentLabel.frame=statusFrame!.retweetContentLabelF!
+ 
+                
                 
                 /** 被转发的微博配图 */
                 if(retweeted_status.pic_urls!.count>0){
@@ -241,11 +243,12 @@ class HWStatusCell: UITableViewCell {
         self.retweetView=retweetView
         
         /** 转发微博正文 + 昵称 */
-        let retweetContentLabel=UILabel()
-        retweetContentLabel.numberOfLines=0
-        retweetContentLabel.font=HWStatusCellRetweetContentFont
+        let retweetContentLabel=HWStatusTextView()
+
         retweetView.addSubview(retweetContentLabel)
         self.retweetContentLabel=retweetContentLabel
+        
+        
         
         /** 转发微博配图 */
         let retweetPhotosView=HWStatusPhotosView()
@@ -310,17 +313,13 @@ class HWStatusCell: UITableViewCell {
         self.sourceLabel = sourceLabel;
         
         //正文 /
-        let contentLabel: UILabel  = UILabel()
-        contentLabel.font = HWStatusCellContentFont;
-        contentLabel.numberOfLines = 0;
+        let contentLabel  = HWStatusTextView()
+
         originalView.addSubview(contentLabel)
         self.contentLabel = contentLabel;
-    }
-    
-    
-    
-    
-    
+
+        }
+ 
     
 
 
