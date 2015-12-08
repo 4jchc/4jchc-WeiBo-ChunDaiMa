@@ -251,7 +251,7 @@ class HWStatus:NSObject {
         
         // 遍历所有的特殊字符串
         let parts: NSMutableArray = NSMutableArray()
-        
+        ///新建一个模型数组.然后排序.
         
         //MARK: 匹配当前微博内容里面的表情字符串
         text.enumerateStringsMatchedByRegex(pattern as String, usingBlock: { (captureCount, captureString, capturedRanges, stop) -> Void in
@@ -299,7 +299,7 @@ class HWStatus:NSObject {
             let loc1 = part1.range!.location;
             let loc2 = part2.range!.location;
             
-            if (loc1 <= loc2) {
+            if (loc1 > loc2) {
                 // part1>part2
                 // part1放后面, part2放前面
                 return NSComparisonResult.OrderedDescending;
@@ -325,7 +325,7 @@ class HWStatus:NSObject {
                 let name = HWEmotionTool.emtionWithChs(part.text as! String)?.png
                
                 if ((name) != nil) { // 能找到对应的图片
-                    //attch.image = UIImage(named: "d_aini")
+                    
                     attch.image = UIImage(named: name as! String)
                     attch.bounds = CGRectMake(0, -3, font.lineHeight, font.lineHeight);
                     substr = NSAttributedString(attachment: attch)

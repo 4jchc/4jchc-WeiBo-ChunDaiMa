@@ -14,7 +14,7 @@ class HWNavigationController: UINavigationController {
         super.init(rootViewController: rootViewController)
         
         
-//        print(__FUNCTION__)
+        print(__FUNCTION__)
 //        let item:UIBarButtonItem = UIBarButtonItem.appearance()
 //        // 设置普通状态
 //        // key：NS****AttributeName
@@ -22,14 +22,14 @@ class HWNavigationController: UINavigationController {
 //        let attributesNormal =  [NSForegroundColorAttributeName: UIColor.orangeColor(),            NSFontAttributeName: UIFont(name: "Heiti SC", size: 13.0)!]
 //        item.setTitleTextAttributes(attributesNormal, forState: UIControlState.Normal)
 //        
+//        
 //        //字体
 //        /// 设置不可用状态
 //        let attributesDisabled =  [NSForegroundColorAttributeName: UIColor.RGB(0.6, 0.6, 0.6, 0.8), NSFontAttributeName: UIFont(name: "Heiti SC", size: 13.0)!]
-//        //let attributesDisabled =  [NSForegroundColorAttributeName: UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.6), NSFontAttributeName: UIFont(name: "Heiti SC", size: 13.0)!]
 //        item.setTitleTextAttributes(attributesDisabled, forState: UIControlState.Disabled)
-//        //self.navigationItem.rightBarButtonItem?.enabled = false
+//        self.navigationItem.rightBarButtonItem?.enabled = false
     }
-//
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -54,18 +54,24 @@ class HWNavigationController: UINavigationController {
     override class func initialize() {
 
         print(__FUNCTION__)
-        let item:UIBarButtonItem = UIBarButtonItem.appearance()
+        /// >1 ******❌用系统的UIBarButtonItem无法设置Disabled下的灰色状态
+
+        // 设置整个项目所有item的主题样式
+//        let item:UIBarButtonItem = UIBarButtonItem.appearance()
         // 设置普通状态
         // key：NS****AttributeName
         //颜色
-        let attributesNormal =  [NSForegroundColorAttributeName: UIColor.orangeColor(),            NSFontAttributeName: UIFont(name: "Heiti SC", size: 13.0)!]
-        item.setTitleTextAttributes(attributesNormal, forState: UIControlState.Normal)
+//        let attributesNormal =  [NSForegroundColorAttributeName: UIColor.orangeColor(),            NSFontAttributeName: UIFont.systemFontOfSize(15)]
+//        item.setTitleTextAttributes(attributesNormal, forState: UIControlState.Normal)
+//        
+//        //字体
+//        /// 设置不可用状态
+//        let attributesDisabled =  [NSForegroundColorAttributeName: UIColor.grayColor(),            NSFontAttributeName: NSFontAttributeName]
+//        //let attributesDisabled =  [NSForegroundColorAttributeName: UIColor.RGB(1, 1, 1, 1), NSFontAttributeName: UIFont(name: "Heiti SC", size: 15.0)!]
+//        
+//        item.setTitleTextAttributes(attributesDisabled, forState: UIControlState.Disabled)
         
-        //字体
-        /// 设置不可用状态
-        let attributesDisabled =  [NSForegroundColorAttributeName: UIColor.RGB(1, 1, 1, 1), NSFontAttributeName: UIFont(name: "Heiti SC", size: 15.0)!]
-
-        item.setTitleTextAttributes(attributesDisabled, forState: UIControlState.Disabled)
+        
 
     }
     

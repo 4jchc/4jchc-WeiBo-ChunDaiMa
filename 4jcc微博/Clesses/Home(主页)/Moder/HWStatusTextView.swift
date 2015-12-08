@@ -29,9 +29,11 @@ class HWStatusTextView: UITextView {
 
     
     
+    
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        // 触摸对象
         
+        // 触摸对象
         let touch:UITouch = (touches as NSSet).anyObject() as! UITouch
         
         // 获取当前的位置
@@ -42,8 +44,9 @@ class HWStatusTextView: UITextView {
         var contains:Bool = false
             
         for special in specials {
-            
-                self.selectedRange = special.range
+            //TODO:会报错 for循环没有指定类型
+            //let special =
+                self.selectedRange = (special as! HWSpecial).range!
                 // self.selectedRange --影响--> self.selectedTextRange
                 // 获得选中范围的矩形框
             let rects: NSArray = self.selectionRectsForRange(self.selectedTextRange!)
@@ -51,7 +54,7 @@ class HWStatusTextView: UITextView {
                 self.selectedRange = NSMakeRange(0, 0);
                 
                 for selectionRect in rects {
-                    let rect: CGRect = selectionRect.rect;
+                    let rect: CGRect = (selectionRect as! UITextSelectionRect).rect;
                     if (rect.size.width == 0 || rect.size.height == 0) { continue }
                     
                     if (CGRectContainsPoint(rect, point)) { // 点中了某个特殊字符串
@@ -62,7 +65,7 @@ class HWStatusTextView: UITextView {
                 
                 if (contains) {
                     for selectionRect in rects {
-                        let rect: CGRect = selectionRect.rect;
+                        let rect: CGRect = (selectionRect as! UITextSelectionRect).rect;
                         if (rect.size.width == 0 || rect.size.height == 0) { continue }
                         
                         let cover: UIView  = UIView()
@@ -80,6 +83,10 @@ class HWStatusTextView: UITextView {
             
             // 在被触摸的特殊字符串后面显示一段高亮的背景
         }
+
+
+    
+    
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.25 * Double(NSEC_PER_SEC)))
@@ -101,10 +108,7 @@ class HWStatusTextView: UITextView {
         }
     }
 
-    
-    
-    
-    
+
 
     }
 

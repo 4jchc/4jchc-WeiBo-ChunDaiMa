@@ -92,9 +92,22 @@ class HWComposeViewController: UIViewController,HWComposeToolbarDelegate,UITextV
         }
         ///  设置导航栏内容
         func setupNav(){
-            self.navigationItem.leftBarButtonItem=UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Done, target: self, action: "cancel")
-            self.navigationItem.rightBarButtonItem=UIBarButtonItem(title: "发送", style: UIBarButtonItemStyle.Done, target: self, action: "send")
-            self.navigationItem.rightBarButtonItem!.enabled=false
+            
+                self.navigationItem.leftBarButtonItem=UIBarButtonItem.item("", title: "取消", target: self, action: "cancel")
+                //右边 item
+                navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+                navigationItem.rightBarButtonItem?.enabled = false
+    
+            
+            
+//            self.navigationItem.leftBarButtonItem=UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: "cancel")
+//            self.navigationItem.rightBarButtonItem=UIBarButtonItem(title: "发送", style: UIBarButtonItemStyle.Plain, target: self, action: "send")
+//            self.navigationItem.rightBarButtonItem!.enabled=false
+//            let attributesDisabled =  [NSForegroundColorAttributeName: UIColor.grayColor(),            NSFontAttributeName: NSFontAttributeName]
+//            //let attributesDisabled =  [NSForegroundColorAttributeName: UIColor.RGB(1, 1, 1, 1), NSFontAttributeName: UIFont(name: "Heiti SC", size: 15.0)!]
+//            
+//            self.navigationItem.rightBarButtonItem!.setTitleTextAttributes(attributesDisabled, forState: UIControlState.Disabled)
+
 
             
             let name=HMAccountTool.loadAccount()!.name
@@ -122,7 +135,25 @@ class HWComposeViewController: UIViewController,HWComposeToolbarDelegate,UITextV
                 self.title=prefix
             }
         }
-    
+    //右边懒加载
+    private lazy var rightButton: UIButton = {
+        let button = UIButton()
+        //设置 button 的文字颜色
+        button.setTitle("发送", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.grayColor(), forState: UIControlState.Disabled)
+        //设置 button 的背景色
+        button.setBackgroundImage(UIImage(named: "common_button_orange"), forState: UIControlState.Normal)
+        button.setBackgroundImage(UIImage(named: "common_button_orange_highlighted"), forState: UIControlState.Highlighted)
+        button.setBackgroundImage(UIImage(named: "common_button_white_disable"), forState: UIControlState.Disabled)
+        button.size = CGSizeMake(44, 30)
+        button.titleLabel?.font = UIFont.systemFontOfSize(14)
+        
+        //添加点击事件
+        button.addTarget(self, action: "send", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        return button
+    }()
     
         
         ///  添加输入控件
@@ -161,7 +192,7 @@ class HWComposeViewController: UIViewController,HWComposeToolbarDelegate,UITextV
         func emotionDidSelect(notification:NSNotification){
             let emotion=notification.userInfo![HWSelectEmotionKey] as! HWEmotion
             self.textView.insertEmotion(emotion)
-            //self.navigationItem.rightBarButtonItem!.enabled=true
+            self.navigationItem.rightBarButtonItem!.enabled=true
             
         }
         ///  键盘的frame发生改变时调用（显示、隐藏等）
@@ -316,7 +347,7 @@ class HWComposeViewController: UIViewController,HWComposeToolbarDelegate,UITextV
             // 结束切换键盘
             self.switchingKeyboard=false
 
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.01 * Double(NSEC_PER_SEC)))
             dispatch_after(delayTime, dispatch_get_main_queue()) {
                 self.textView.becomeFirstResponder()
                 //self.switchingKeyboard=true

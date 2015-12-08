@@ -28,7 +28,7 @@ class HWTabBarViewController: UITabBarController,HMTabBarDelegate{
         let profile:HWProfileViewController = HWProfileViewController()
         self.addChildVc(profile, title: "我", image: "tabbar_profile", selectedImage: "tabbar_profile_selected")
         
-        //MARK: ✅ 2.更换系统自带的tabbar
+        //MARK: ✅KVC 2.更换系统自带的tabbar
         //    self.tabBar = [[HWTabBar alloc] init];
         let tabBar:HMTabBar = HMTabBar()
         tabBar.delegateHM = self;
