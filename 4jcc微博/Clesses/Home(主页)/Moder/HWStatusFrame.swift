@@ -125,7 +125,6 @@ class HWStatusFrame: NSObject {
             ///*****✅宽度要限制.不然不会换行.=屏幕的宽度-2个边距的宽度
             //TODO:会报错 status!.attributedText?没有值(因为isEmotions)
             //let contentSize:CGSize = status!.text!.sizeWithFont(HWStatusCellContentFont, maxW: maxW)
-            print("*****\(status!.attributedText!)")
             let contentSize:CGSize = (status!.attributedText?.boundingRectWithSize(CGSizeMake(maxW, CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil).size)!
             
             //let contentSize:CGSize = CGSizeMake(300, 50)

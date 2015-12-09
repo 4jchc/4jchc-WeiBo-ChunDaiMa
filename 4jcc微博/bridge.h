@@ -17,3 +17,5 @@
 #import "MJRefresh.h"
 
 #import "RegexKitLite.h"
+
+#import "FMDB.h"

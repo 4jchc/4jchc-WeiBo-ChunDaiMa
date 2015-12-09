@@ -56,7 +56,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         self.setupUpRefresh()
         
         //MARK: 获得未读数
-        let timer: NSTimer  = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "setupUnreadCount", userInfo: nil, repeats:true)
+        let timer: NSTimer  = NSTimer.scheduledTimerWithTimeInterval(120, target: self, selector: "setupUnreadCount", userInfo: nil, repeats:true)
         // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         
@@ -81,7 +81,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
             
            //MARK:  设置提醒数字(微博的未读数)
             let status = (responseObject["status"])!!.description as NSString
-            print("*****\(status)")
+           /// print("*****\(status)")
             if status.isEqualToString("0") {// 如果是0，得清空数字
                 
                 self.tabBarItem.badgeValue = nil;
@@ -175,7 +175,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         let params:NSMutableDictionary = NSMutableDictionary()
         
         params["access_token"] = account.access_token;
-        //params["count"] = 12
+        params["count"] = 1
         
         // 取出最前面的微博（最新的微博，ID最大的微博）//❌ as? HWStatusFrame写成HWStatus,所以一直显示刷新20条
         let firstStatus = self.statusFrames!.firstObject as? HWStatusFrame
@@ -184,6 +184,41 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
             
             params["since_id"] = firstStatus!.status!.idstr //firstStatus!.idstr;
         }
+        
+        
+        //MARK: 闭包带参数
+        // 定义一个block处理返回的字典数据
+        let dealingResultBlock: (NSArray) -> Void = { (dictArray) in
+            
+            /** 将 "微博字典"数组 转为 "微博模型"数组*/
+            let newStatuses = (HWStatus.objectArrayWithKeyValuesArray(dictArray as [AnyObject]) as AnyObject) //as? NSMutableArray)!
+            // 将 HWStatus数组 转为 HWStatusFrame数组
+            let newFrames = self.stausFramesWithStatuses(newStatuses as! NSArray)
+            
+            // 将最新的微博数据，添加到总数组的最前面
+            let range: NSRange = NSMakeRange(0, newFrames.count);
+            let set: NSIndexSet = NSIndexSet(indexesInRange: range)
+            self.statusFrames!.insertObjects(newFrames as [AnyObject],atIndexes:set)
+            
+            // 刷新表格
+            self.tableView.reloadData()
+            
+            // 结束刷新
+            self.tableView.mj_header.endRefreshing()
+            
+            // 显示最新微博的数量(刚刚加载转换的数组个数)
+            self.showNewStatusCount(newStatuses.count)
+        }
+
+    
+        // 2.先尝试从数据库中加载微博数据
+        let statuses: NSArray? = HWStatusToolSQ.statusesWithParams(params)!
+        
+        print("*****\(statuses!.count)")
+        if (statuses!.count != 0) {
+            // 数据库有缓存数据
+            dealingResultBlock(statuses!)
+        } else {
 
 
         // 3.发送请求
@@ -192,35 +227,17 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         HWHttpTool.get("https://api.weibo.com/2/statuses/friends_timeline.json", params: params as NSDictionary, success: { (responseObject) -> Void in
 
             let dictArray:NSArray = responseObject["statuses"] as! NSArray
+            // 缓存新浪返回的字典数组
+            HWStatusToolSQ.saveStatuses(dictArray)
 
-            /** 将 "微博字典"数组 转为 "微博模型"数组*/
-            let newStatuses = (HWStatus.objectArrayWithKeyValuesArray(dictArray as [AnyObject]) as AnyObject) //as? NSMutableArray)!
-            // 将 HWStatus数组 转为 HWStatusFrame数组
-            let newFrames = self.stausFramesWithStatuses(newStatuses as! NSArray)
-
-            // 将最新的微博数据，添加到总数组的最前面
-            let range: NSRange = NSMakeRange(0, newFrames.count);
-            let set: NSIndexSet = NSIndexSet(indexesInRange: range)
-            self.statusFrames!.insertObjects(newFrames as [AnyObject],atIndexes:set)
-   
+            dealingResultBlock(dictArray)
             
-            // 刷新表格
-            self.tableView.reloadData()
-
-            // 结束刷新
-            self.tableView.mj_header.endRefreshing()
-            
-        
-
-            // 显示最新微博的数量(刚刚加载转换的数组个数)
-            self.showNewStatusCount(newStatuses.count)
-
 
             }) { (error) -> Void in
                 print("*****请求失败")
                 self.tableView.mj_header.endRefreshing()
+            }
         }
-
     }
     
 
@@ -249,14 +266,11 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
             params["max_id"] = (lastStatus!.status!.idstr?.integerValue)! - 1
                 
         }
- 
-        // 3.发送请求
-        //https://api.weibo.com/2/statuses/friends_timeline.json
         
-        HWHttpTool.get("https://api.weibo.com/2/statuses/friends_timeline.json", params: params as NSDictionary, success: { (responseObject) -> Void in
+        //MARK: 闭包带参数
+        // 定义一个block处理返回的字典数据
+        let dealingResultBlock: (NSArray) -> Void = { (dictArray) in
             
-            let dictArray:NSArray = responseObject["statuses"] as! NSArray
-
             // 将 "微博字典"数组 转为 "微博模型"数组
             let newStatuses = (HWStatus.objectArrayWithKeyValuesArray(dictArray as [AnyObject]) as AnyObject) //as? NSMutableArray)!
             // 将 HWStatus数组 转为 HWStatusFrame数组
@@ -264,13 +278,36 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
             
             // 将更多的微博数据，添加到总数组的最后面
             self.statusFrames!.addObjectsFromArray(newFrames as [AnyObject])
-
+            
             // 刷新表格
             self.tableView.reloadData()
             
             // 结束刷新(隐藏footer)
             self.tableView.mj_footer.endRefreshing()
-           // self.tableView.tableFooterView!.hidden = true
+        }
+
+        
+        // 2.先尝试从数据库中加载微博数据
+        let statuses: NSArray? = HWStatusToolSQ.statusesWithParams(params)!
+        print("*****\(statuses?.count)")
+        if (statuses!.count != 0) {
+            // 数据库有缓存数据
+            dealingResultBlock(statuses!)
+            
+        } else {
+        
+        
+        
+        // 3.发送请求
+        //https://api.weibo.com/2/statuses/friends_timeline.json
+        
+        HWHttpTool.get("https://api.weibo.com/2/statuses/friends_timeline.json", params: params as NSDictionary, success: { (responseObject) -> Void in
+            
+            let dictArray:NSArray = responseObject["statuses"] as! NSArray
+            // 缓存新浪返回的字典数组
+            HWStatusToolSQ.saveStatuses(dictArray)
+            
+            dealingResultBlock(dictArray)
             
             }) { (error) -> Void in
                 print("*****请求失败")
@@ -278,8 +315,8 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
                 //self.tableView.tableFooterView!.hidden = true
                 self.tableView.mj_footer.endRefreshing()
 
+            }
         }
-        
     }
     
     
