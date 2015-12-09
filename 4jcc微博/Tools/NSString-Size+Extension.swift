@@ -36,6 +36,40 @@ extension NSString{
     
     }
 
+        func fileSize()->Int{
+        // 文件管理者
+        let mgr: NSFileManager = NSFileManager.defaultManager()
+        // 判断是否为文件
+        var di: ObjCBool  = false;
+        let exists: Bool = mgr.fileExistsAtPath(self as String, isDirectory: &di)
+
+        // 文件\文件夹不存在
+        if (exists == false) {return 0}
     
+        if (di) { // self是一个文件夹
+            // 遍历caches里面的所有内容 --- 直接和间接内容
+            let subpaths: NSArray = mgr.subpathsAtPath(self as String)!
+            var  totalByteSize:Int = 0;
+            for subpath in subpaths {
+                // 获得全路径
+                let fullSubpath: NSString  = self.stringByAppendingPathComponent(subpath as! String)
+                // 判断是否为文件
+                var di:ObjCBool = true
+                let exists: Bool = mgr.fileExistsAtPath(self as String, isDirectory: &di)
+                if (exists == false) { // 文件
+                let attributes: NSDictionary = try! mgr.attributesOfItemAtPath(fullSubpath as String)
+                    
+                
+                    totalByteSize = totalByteSize + Int(attributes.fileSize())
+                }
+            }
+            return totalByteSize;
+        } else { // self是一个文件
+            let attributes: NSDictionary = try! mgr.attributesOfItemAtPath(self as String)
+            return Int(attributes.fileSize())
+            
+           
+        }
+    }
 
 }

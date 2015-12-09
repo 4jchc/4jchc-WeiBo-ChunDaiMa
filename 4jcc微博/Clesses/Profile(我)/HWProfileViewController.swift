@@ -14,7 +14,7 @@ class HWProfileViewController: UITableViewController {
         super.viewDidLoad()
 
         // let ID:NSString = "cell"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "设置",style: UIBarButtonItemStyle.Done, target: self, action: "setting")
+
          self.navigationItem.rightBarButtonItem?.enabled = false
         
         let seachbar:HMSearchBar = HMSearchBar.SeachBar()
@@ -22,22 +22,87 @@ class HWProfileViewController: UITableViewController {
         seachbar.frame.size.height = 30
         seachbar.frame.origin.x = 21
         view.addSubview(seachbar)
+        
+        // 字节大小
+        let byteSize  = (SDImageCache.sharedImageCache)().getSize()
+        // M大小
+        let size:Double  = Double(byteSize / 1000 / 1000)
+        self.navigationItem.title = "缓存大小(\(size)M)"
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除缓存",style: UIBarButtonItemStyle.Done, target: self, action: "clearCache")
+        self.fileOperation()
+        
+        
     }
+    
+    
+    
+    
+    func fileOperation(){
+        // 文件管理者
+        let mgr: NSFileManager = NSFileManager.defaultManager()
+        // 缓存路径
+        let caches = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last! as NSString
+        try! mgr.removeItemAtPath(caches as String)
+        
+    }
+    
+    
+    
+    
+    
+    
+    /**
+     NSString *filepath = [caches stringByAppendingPathComponent:@"cn.heima.----2-/Cache.db-wal"];
+     
+     // 获得文件\文件夹的属性(注意:文件夹是没有大小属性的,只有文件才有大小属性)
+     NSDictionary *attrs = [mgr attributesOfItemAtPath:filepath error:nil];
+     HWLog(@"%@ %@", caches, attrs);
+     */
+    
+    
+    
+    
+    
+    
+    func clearCache(){
+        // 提醒
+        let circle: UIActivityIndicatorView  = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        circle.startAnimating()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: circle)
+        
+        // 清除缓存
+        SDImageCache.sharedImageCache().clearDisk()
+        
+        // 显示按钮
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除缓存",style: UIBarButtonItemStyle.Done, target: self, action: "clearCache")
+        self.navigationItem.title = "缓存大小(0M)"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func setting(){
         let v1 = HWTest2ViewController()
         self.navigationController?.pushViewController(v1, animated: true)
         
     }
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-      
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
@@ -51,59 +116,6 @@ class HWProfileViewController: UITableViewController {
         return 0
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
