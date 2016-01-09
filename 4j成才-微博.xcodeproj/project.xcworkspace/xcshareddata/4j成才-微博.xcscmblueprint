@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B3908666ADFA3672937CE7A795484DBFBC3C42A7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B3908666ADFA3672937CE7A795484DBFBC3C42A7" : 0,
+    "53024263CED2DEB4300E2398DBB80CCE0F599986" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "507B234A-3381-4C57-900D-FF0C5F791544",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B3908666ADFA3672937CE7A795484DBFBC3C42A7" : "WeiBo-%E7%BA%AF%E4%BB%A3%E7%A0%81%E7%89%88\/",
+    "53024263CED2DEB4300E2398DBB80CCE0F599986" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "4j成才-微博",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "4j成才-微博.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/4jchc\/4jchc-WeiBo-CunDaiMa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "53024263CED2DEB4300E2398DBB80CCE0F599986"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.oschina.net\/name\/project.git4jchcclear",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3908666ADFA3672937CE7A795484DBFBC3C42A7"
+    }
+  ]
+}

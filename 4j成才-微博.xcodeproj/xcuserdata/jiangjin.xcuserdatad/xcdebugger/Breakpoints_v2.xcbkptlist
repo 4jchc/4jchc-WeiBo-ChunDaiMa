@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/HWMessageCenterViewController.swift"
+            timestampString = "468206101.576776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/HWMessageCenterViewController.swift"
+            timestampString = "468206101.576776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/HWMessageCenterViewController.swift"
+            timestampString = "468206101.576776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/OAuth(&#x6388;&#x6743;)/Tool/HMAccountTool.swift"
+            timestampString = "468559828.153295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "loadAccount()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/OAuth(&#x6388;&#x6743;)/HMOAuthViewController.swift"
+            timestampString = "468559588.718218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "webView(_:shouldStartLoadWithRequest:navigationType:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/OAuth(&#x6388;&#x6743;)/Model/HMAccountModel.swift"
+            timestampString = "470905171.770259"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "encodeWithCoder(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/View/HWLoadMoreFooter.swift"
+            timestampString = "470416043.96491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "footer()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471344800.699388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "629"
+            endingLineNumber = "629">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471341315.265319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "loadMoreStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/View/HWLoadMoreFooter.swift"
+            timestampString = "470416043.96491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "HWLoadMoreFooter"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/View/HMTitleButton.swift"
+            timestampString = "470471694.915622"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(frame:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Main/HWNavigationController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "showViewController(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "470978840.16915"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "stausFramesWithStatuses(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "textDidChange()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "setupTextView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471002054.697398"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "HWComposeViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471006719.249462"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471006719.249462"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "setupPhotosView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "setupNav()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "emotionDidDelete()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "emotionDidSelect(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "setupTextView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "setupTextView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "keyboardWillChangeFrame(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWComposeViewController.keyboardWillChangeFrame (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWComposeViewController)(__ObjC.NSNotification) -&gt; ()"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Compose(%E5%8F%91%E5%BE%AE%E5%8D%9A)/Controller/HWComposeViewController.swift"
+                  timestampString = "472901410.975195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "1316">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWComposeViewController.(keyboardWillChangeFrame (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWComposeViewController) -&gt; (__ObjC.NSNotification) -&gt; ()).(closure #1)"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Compose(%E5%8F%91%E5%BE%AE%E5%8D%9A)/Controller/HWComposeViewController.swift"
+                  timestampString = "472901410.975454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "215"
+                  endingLineNumber = "215"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "keyboardWillChangeFrame(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "keyboardWillChangeFrame(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "keyboardWillChangeFrame(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "keyboardWillChangeFrame(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
+            landmarkName = "switchKeyboard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "switchKeyboard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
+            landmarkName = "switchKeyboard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "switchKeyboard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
+            landmarkName = "switchKeyboard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Compose(&#x53d1;&#x5fae;&#x535a;)/Controller/HWComposeViewController.swift"
+            timestampString = "471255927.283176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "switchKeyboard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus)(__ObjC.NSString) -&gt; __ObjC.NSAttributedString"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901410.993928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.(attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus) -&gt; (__ObjC.NSString) -&gt; __ObjC.NSAttributedString).(closure #1)"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901410.994254"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus)(__ObjC.NSString) -&gt; __ObjC.NSAttributedString"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901410.996297"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "282"
+                  endingLineNumber = "282"
+                  offsetFromSymbolStart = "1104">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.(attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus) -&gt; (__ObjC.NSString) -&gt; __ObjC.NSAttributedString).(closure #2)"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901410.996666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "284"
+                  endingLineNumber = "284"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus)(__ObjC.NSString) -&gt; __ObjC.NSAttributedString"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901410.998476"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "300"
+                  endingLineNumber = "300"
+                  offsetFromSymbolStart = "1628">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.(attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus) -&gt; (__ObjC.NSString) -&gt; __ObjC.NSAttributedString).(closure #3)"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901410.998804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "301"
+                  endingLineNumber = "301"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471341823.830557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "attributedTextWithText(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus)(__ObjC.NSString) -&gt; __ObjC.NSAttributedString"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.002932"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.(attributedTextWithText (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus) -&gt; (__ObjC.NSString) -&gt; __ObjC.NSAttributedString).(closure #1)"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.003264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471235528.501859"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "HWStatus"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedText.getter : Swift.Optional&lt;__ObjC.NSAttributedString&gt;"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.005098"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedText.setter : Swift.Optional&lt;__ObjC.NSAttributedString&gt;"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.005644"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.attributedText.materializeForSet : Swift.Optional&lt;__ObjC.NSAttributedString&gt;"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.006256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.init (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.Type)() -&gt; _j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.006707"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471235540.774126"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "HWStatus"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.text.materializeForSet : Swift.Optional&lt;__ObjC.NSString&gt;"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.009825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.init (_j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus.Type)() -&gt; _j&#x6210;&#x624d;_&#x5fae;&#x535a;.HWStatus"
+                  moduleName = "4j&#x6210;&#x624d;-&#x5fae;&#x535a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangjin/C/Z%E5%BE%AE%E5%8D%9A:%E7%BE%8E%E5%9B%A2:%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/4jcc%E5%BE%AE%E5%8D%9A-mj/4jcc%E5%BE%AE%E5%8D%9A/Clesses/Home(%E4%B8%BB%E9%A1%B5)/Moder/HWStatus.swift"
+                  timestampString = "472901411.010267"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/Moder/HWStatus.swift"
+            timestampString = "471235542.605258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "HWStatus"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471340723.081499"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "loadNewStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471343789.24194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "loadNewStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471343796.363927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "loadNewStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471343800.580087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "loadNewStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471344800.699388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
+            landmarkName = "loadMoreStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471343813.732022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "loadMoreStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471346933.197127"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "loadNewStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471346934.483539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "loadNewStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471356982.646684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "loadMoreStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Home(&#x4e3b;&#x9875;)/HWHomeViewController.swift"
+            timestampString = "471357060.489252"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "loadMoreStatus()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Main/Moder/HWStatusToolSQ.swift"
+            timestampString = "471361785.304427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "saveStatuses(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Main/Moder/HWStatusToolSQ.swift"
+            timestampString = "471878581.37805"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "initialize()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4jcc&#x5fae;&#x535a;/Clesses/Main/Moder/HWStatusToolSQ.swift"
+            timestampString = "471878583.867818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "initialize()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
