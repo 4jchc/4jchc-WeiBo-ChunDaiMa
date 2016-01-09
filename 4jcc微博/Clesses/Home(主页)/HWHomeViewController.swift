@@ -175,7 +175,7 @@ class HWHomeViewController: UITableViewController,HMDropdownMenuDelegate {
         let params:NSMutableDictionary = NSMutableDictionary()
         
         params["access_token"] = account.access_token;
-        params["count"] = 1
+        params["count"] = 20
         
         // 取出最前面的微博（最新的微博，ID最大的微博）//❌ as? HWStatusFrame写成HWStatus,所以一直显示刷新20条
         let firstStatus = self.statusFrames!.firstObject as? HWStatusFrame

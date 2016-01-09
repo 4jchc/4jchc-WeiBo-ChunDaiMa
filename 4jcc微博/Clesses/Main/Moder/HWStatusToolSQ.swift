@@ -19,7 +19,9 @@ class HWStatusToolSQ: NSObject {
         // 创建FMDatabaseQueue对象会自动打开数据库,如果数据库不存在会创建数据库
         // 后续的所有数据库操作都是通过dbQueue来调用
         db = FMDatabase(path: path)
-        db?.open()
+        if db?.open() == false {
+            return
+        }
         let sql:String = "CREATE TABLE IF NOT EXISTS t_status (id integer PRIMARY KEY, status blob NOT NULL, idstr text NOT NULL);"
         db?.executeUpdate(sql, withArgumentsInArray: nil)
 

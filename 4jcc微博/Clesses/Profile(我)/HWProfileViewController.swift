@@ -14,8 +14,8 @@ class HWProfileViewController: UITableViewController {
         super.viewDidLoad()
 
         // let ID:NSString = "cell"
-
-         self.navigationItem.rightBarButtonItem?.enabled = false
+      
+        self.navigationItem.rightBarButtonItem?.enabled = true
         
         let seachbar:HMSearchBar = HMSearchBar.SeachBar()
         seachbar.frame.size.width = 300
@@ -30,7 +30,7 @@ class HWProfileViewController: UITableViewController {
         self.navigationItem.title = "缓存大小(\(size)M)"
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除缓存",style: UIBarButtonItemStyle.Done, target: self, action: "clearCache")
-        self.fileOperation()
+        //self.fileOperation()
         
         
     }
@@ -43,7 +43,13 @@ class HWProfileViewController: UITableViewController {
         let mgr: NSFileManager = NSFileManager.defaultManager()
         // 缓存路径
         let caches = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last! as NSString
-        try! mgr.removeItemAtPath(caches as String)
+    
+        if caches.length != 0 {
+            
+          // try mgr.removeItemAtPath(caches as String)
+            
+        }
+        
         
     }
     
@@ -106,15 +112,15 @@ class HWProfileViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
 
 

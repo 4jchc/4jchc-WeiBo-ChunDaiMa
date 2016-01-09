@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 2.设置根控制器
        
 //        self.window!.rootViewController = HWTabBarViewController()
-
+        print("*HMAccountTool.loadAccount()****\(HMAccountTool.loadAccount())")
         if  HMAccountTool.loadAccount() != nil {
 
          // 之前已经登录成功过
